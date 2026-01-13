@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #184181;
+  --color-dark: #0d2d60;
+  --color-secondary: #f89e48;
+  --color-primary-200: #1356c2;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-optical-sizing: auto;
+  background: #d4eef73e;
+}
+
+.lineGrad {
+  background: white;
+}
+
+@media (min-width: 1024px) {
+  .lineGrad {
+    background: linear-gradient(
+      360deg,
+      #0b316f 0%,
+      #cbeaf5 50%,
+      #d4eef73e 100%
+    );
+  }
+}
+
+.card-gradient {
+  background: #c7e8f2;
+  background: linear-gradient(
+    320deg,
+    rgba(199, 232, 242, 1) 0%,
+    rgba(235, 240, 242, 1) 83%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+/* --color-primary: #0090bf;
+    --color-primary-200: #4aaaca;
+    --color-dark: #016d91; */
