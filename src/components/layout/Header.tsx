@@ -3,7 +3,7 @@ import Logo from "../common/Logo";
 import { Menu, X } from "lucide-react";
 import Button from "../common/Button";
 
-export default function Header() {
+export default function Header({ topOffset = 0 }: { topOffset?: number }) {
   const [open, setOpen] = useState(false);
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -17,7 +17,10 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full backdrop-blur-md z-50">
+    <header
+      className="fixed left-0 w-full backdrop-blur-md z-50 transition-all duration-300"
+      style={{ top: topOffset }}
+    >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between mt-4">
         <div className="flex-1/5">
           <Logo width={60} />
