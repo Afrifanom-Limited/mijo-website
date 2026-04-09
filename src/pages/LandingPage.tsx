@@ -1,4 +1,5 @@
 import BusinessCustomers from "./components/BusinessCustomers";
+import ComingSoon from "./components/ComingSoon";
 import Customers from "./components/Customers";
 import Faqs from "./components/Faqs";
 import Features from "./components/Features";
@@ -11,6 +12,9 @@ import MijoPartners from "./components/MijoPartners";
 const LandingPage = () => {
   return (
     <div className="space-y-8 lg:space-y-24 pb-24">
+      <section id="coming-soon" className="">
+        <ComingSoon />
+      </section>
       <HeroSection />
       <section id="features" className="">
         <Features />

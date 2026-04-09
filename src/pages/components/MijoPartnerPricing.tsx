@@ -48,7 +48,6 @@ const MijoPartnerPricing = () => {
       <div className="hidden lg:block space-y-8">
         <div className="grid grid-cols-3 gap-8">
           {pricingData.map((p, index) => (
-            // <Reveal key={index} direction="left" delay={index * 150}>
             <PricingCard
               tier={p.tier}
               key={index}
