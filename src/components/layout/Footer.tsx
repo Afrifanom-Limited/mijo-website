@@ -96,9 +96,19 @@ const Footer = () => {
                 <li>
                   <a
                     className="text-gray-600 transition hover:text-gray-900"
-                    href="#0"
+                    href="https://mijoride.ghanapostgps.com/info-driver/terms-and-conditions"
+                    target="_blank"
                   >
                     Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-gray-600 transition hover:text-gray-900"
+                    href="https://mijoride.ghanapostgps.com/info-driver/privacy-policy/"
+                    target="_blank"
+                  >
+                    Privacy Policy
                   </a>
                 </li>
               </ul>
