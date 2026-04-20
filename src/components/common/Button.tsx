@@ -1,7 +1,7 @@
 const Button = ({
   text = "",
   bgColor = "bg-primary",
-  textColor = "",
+  textColor = "text-white",
   onClick,
 }: {
   text?: string;
@@ -11,7 +11,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${bgColor} ${textColor} hover:bg-dark text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer`}
+      className={`${bgColor} ${textColor} hover:bg-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer`}
       onClick={onClick}
     >
       {text}
