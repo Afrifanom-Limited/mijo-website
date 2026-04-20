@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #184181;
-  --color-dark: #0d2d60;
+  --color-primary: #0090bf;
+  --color-dark: #0a2550;
+  --color-primary-200: #33aed4;
   --color-secondary: #f89e48;
-  --color-primary-200: #1356c2;
 }
 body {
   font-family: "Nunito", sans-serif;
@@ -38,7 +38,3 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
 }
-
-/* --color-primary: #0090bf;
-    --color-primary-200: #4aaaca;
-    --color-dark: #016d91; */

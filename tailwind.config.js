@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: { 200: "#ffffff", 500: "#1D4ED8" }, // replace with your custom color
+        primary: { 200: "#ffffff", 500: "#0090bf" }, // replace with your custom color
         secondary: "#F43F5E", // replace with your custom color
       },
     },
