@@ -23,7 +23,7 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between mt-4">
         <div className="flex-1/5">
-          <Logo width={60} />
+          <Logo width={80} />
         </div>
         <div className="hidden md:flex md:flex-3/5 justify-center">
           <nav className="hidden md:flex bg-white rounded-full px-6 py-2 shadow-inner border border-blue-100">
@@ -38,7 +38,13 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
                 onClick={() => handleScroll("customers")}
                 className="cursor-pointer hover:text-dark"
               >
-                Customers
+                Riders
+              </li>
+              <li
+                onClick={() => handleScroll("partners")}
+                className="cursor-pointer hover:text-dark"
+              >
+                Drivers
               </li>
               <li
                 onClick={() => handleScroll("business")}
@@ -56,7 +62,7 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
           </nav>
         </div>{" "}
         <div className="hidden md:flex justify-end flex-1/5">
-          <Button onClick={() => handleScroll("started")} text="Get Started" />
+          <Button onClick={() => handleScroll("contact")} text="Contact Us" />
         </div>
         <button
           className="md:hidden text-gray-700"
@@ -80,13 +86,25 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
               onClick={() => handleScroll("customers")}
               className="cursor-pointer hover:text-dark"
             >
-              Customers
+              Riders
+            </li>
+            <li
+              onClick={() => handleScroll("partners")}
+              className="cursor-pointer hover:text-dark"
+            >
+              Drivers
             </li>
             <li
               onClick={() => handleScroll("business")}
               className="cursor-pointer hover:text-dark"
             >
               Businesses
+            </li>
+            <li
+              onClick={() => handleScroll("contact")}
+              className="cursor-pointer hover:text-dark"
+            >
+              Contact Us
             </li>
             <li
               onClick={() => handleScroll("faqs")}
