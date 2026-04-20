@@ -1,5 +1,8 @@
 import { useState } from "react";
-import image from "../../assets/app.png";
+import arrived from "../../assets/arrived.png";
+import location from "../../assets/location.png";
+import preferred from "../../assets/preferred.png";
+import book from "../../assets/book.png";
 import HeaderOne from "../../components/common/HeaderOne";
 import Reveal from "../../components/common/Reveal";
 
@@ -8,35 +11,35 @@ const HowItWorks = () => {
   const steps = [
     {
       step: 1,
-      image: image,
+      image: location,
       title: "Enter your Location",
       subtitle:
         "You can search or enter your digital address for an exact pickup and same for your destination drop-off location as well.",
     },
     {
       step: 2,
-      image: image,
+      image: preferred,
       title: "Select your preferred MIJO",
       subtitle:
         "Choose a standard car for a quick pick up,  an executive car for a more formal occasion or a motorbike or van depending on your delivery needs.",
     },
     {
       step: 3,
-      image: image,
+      image: book,
       title: "Book your  MIJO",
       subtitle:
         "Book your ride or delivery on MIJO and track your driver in real-time to your exact pickup location, with estimated time of arrivals to help you plan ahead.",
     },
     {
       step: 4,
-      image: image,
+      image: arrived,
       title: "Enjoy your MIJO",
       subtitle:
         "Once your driver arrives, it’s time to sit back, relax, and enjoy the ride with GhanaPost Mijo..",
     },
   ];
   return (
-    <div className="lineGrad p-8 mask-[radial-gradient(circle,white_60%,transparent_100%)] py-[100px] lg:py-[120px]">
+    <div className="lineGrad p-8 mask-[radial-gradient(circle,white_60%,transparent_100%)] py-40 lg:py-[180px]">
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           <HeaderOne
