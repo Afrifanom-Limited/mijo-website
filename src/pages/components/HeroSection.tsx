@@ -3,15 +3,6 @@ import Reveal from "../../components/common/Reveal";
 import handImage from "../../assets/hands2.png";
 
 const HeroSection = () => {
-  // const scrollToSection = (id: string) => {
-  //   const el = document.getElementById(id);
-  //   if (el) {
-  //     el.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-  // const handleScroll = (id: string) => {
-  //   scrollToSection(id);
-  // };
   return (
     <div className="pt-[100px] bg-white">
       <div className="flex flex-col items-center text-center px-6 md:px-0 max-w-4xl mx-auto">
@@ -45,12 +36,6 @@ const HeroSection = () => {
             </p>
           </Reveal>
         </div>
-        {/* <Reveal direction="up" delay={300}>
-          <Button
-            text="Get Started with Mijo"
-            onClick={() => handleScroll("started")}
-          />
-        </Reveal> */}
         <div className="hidden lg:block pt-[100px]">
           <img src={handImage} className="w-4/6 mx-auto" />
         </div>

@@ -32,7 +32,7 @@ const MijoPartnerPricing = () => {
   ];
 
   return (
-    <div className="max-w-[800px] mx-auto space-y-8 p-6 lg:p-0 py-[100px] lg:py-[120px]">
+    <div className="max-w-[800px] mx-auto space-y-8 p-6 lg:p-0 py-40 lg:py-[180px]">
       <HeaderOne title="One-off Commission Free Payments " subtitle="" />
       <div className="block lg:hidden space-y-4">
         {pricingData.map((p, index) => (
@@ -93,7 +93,7 @@ const PricingCard = ({
       </div>
 
       <button
-        className="w-full bg-secondary text-white py-3 rounded-xl font-semibold transition-all duration-300 group-hover:bg-dark group-hover:-translate-y-1 shadow-sm cursor-pointer"
+        className="w-full bg-secondary text-white py-3 rounded-xl font-semibold transition-all duration-300 group-hover:bg-primary group-hover:-translate-y-1 shadow-sm cursor-pointer"
         onClick={handleScroll}
       >
         Get Started

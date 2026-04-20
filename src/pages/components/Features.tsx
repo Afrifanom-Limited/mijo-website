@@ -26,12 +26,12 @@ const Features = () => {
     },
   ];
   return (
-    <div className="mx-auto space-y-8 p-8 py-[100px] lg:py-[120px]">
+    <div className="mx-auto space-y-8 p-8 py-40 lg:py-[180px]">
       <HeaderOne
         title="Mobility That Matches Your Lifestyle."
         subtitle="Getting around or sending packages in Ghana shouldn’t be a hassle. Mijo makes transport and delivery simple, affordable, and right on time with options that work for everyone."
       />
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 lg:px-[200px]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 lg:px-[50px]">
         {features.map((f, index) => (
           <Reveal key={index} direction="up" delay={index * 150}>
             <FeaturesCard f={f} key={index} />

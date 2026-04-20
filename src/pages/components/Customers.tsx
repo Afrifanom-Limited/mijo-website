@@ -6,6 +6,9 @@ import payout from "../../assets/pay-svgrepo-com.svg";
 import ratings from "../../assets/rate.svg";
 import support from "../../assets/support-white.svg";
 import HeaderOne from "../../components/common/HeaderOne";
+import ActionButton from "../../components/common/ActionButton";
+import playStore from "../../assets/play-store.png";
+import appStore from "../../assets/app-store.png";
 
 const Customers = () => {
   const features = [
@@ -47,15 +50,31 @@ const Customers = () => {
     },
   ];
   return (
-    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900 py-[100px] lg:py-[120px]">
+    <section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900 py-40 lg:py-[180px]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20 space-y-24">
           {/* Section header */}
-          <HeaderOne
-            title="Everything You Need in One App"
-            subtitle="Whether you’re a rider, sender, or driver, Mijo’s powerful
-                features keep things smooth, safe, and simple."
-          />
+          <div className="space-y-6">
+            <HeaderOne
+              title="Everything You Need in One App"
+              subtitle="Whether you’re a rider or sender, Mijo’s powerful
+            features keep things smooth, safe, and simple."
+            />
+            <Reveal direction="down" delay={200}>
+              <div className="flex justify-center gap-8">
+                <ActionButton
+                  image={appStore}
+                  text="App Store"
+                  link="https://apps.apple.com/us/app/ghanapostgps/id1296627307?ls=1"
+                />
+                <ActionButton
+                  image={playStore}
+                  text="Play store"
+                  link="https://play.google.com/store/apps/details?id=com.ghanapostgps.ghanapost&hl=en"
+                />
+              </div>
+            </Reveal>
+          </div>
           <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 *:relative *:p-6 *:before:absolute *:before:bg-gray-800 *:before:[block-size:100vh] *:before:[inline-size:1px] *:before:[inset-block-start:0] *:before:-start-px *:after:absolute *:after:bg-gray-800 *:after:[block-size:1px] *:after:[inline-size:100vw] *:after:[inset-block-start:-1px] *:after:start-0 md:*:p-10">
             {features.map((f, i) => (
               <Reveal direction="down" delay={i * 150}>

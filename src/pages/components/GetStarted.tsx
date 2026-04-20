@@ -6,7 +6,7 @@ import Reveal from "../../components/common/Reveal";
 
 const GetStarted = () => {
   return (
-    <div className="max-w-4xl mx-auto space-y-8 p-6 py-[100px] lg:py-[120px]">
+    <div className="max-w-4xl mx-auto space-y-8 p-6 py-40 lg:py-[180px]">
       <HeaderOne
         title="Get Started with Mijo"
         subtitle="Built by Ghanaians, for Ghanaians.
@@ -18,13 +18,11 @@ Download the GhanaPostGPS App, tap on MIJO and experience rides and delivery, th
           <ActionButton
             image={appStore}
             text="App Store"
-            // link="https://apps.apple.com/us/app/ghanapostgps/id1296627307?ls=1"
             link="https://apps.apple.com/us/app/ghanapost-mijo-driver/id6464409910"
           />
           <ActionButton
             image={playStore}
             text="Play store"
-            // link="https://play.google.com/store/apps/details?id=com.ghanapostgps.ghanapost&hl=en"
             link="https://play.google.com/store/apps/details?id=com.ghanapostgps.mijodriver&hl=en_US"
           />
         </div>

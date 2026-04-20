@@ -13,17 +13,11 @@ const ComingSoon = () => {
     scrollToSection(id);
   };
   return (
-    <div className="mx-auto px-6 pt-[100px] lg:pt-[120px]">
+    <div className="mx-auto px-6 pt-[120px] lg:pt-[140px]">
       <HeaderOne
         title="Mijo Is Coming to Accra"
         subtitle="Built by Ghanaians, for Ghanaians — Mijo is a new ride-hailing app launching in Accra. Get fast, reliable rides and smart deliveries, all in one place."
       />
-
-      {/* <p className="text-sm uppercase tracking-[0.25em] text-gray-400 text-center pt-6">
-        Launching on{" "}
-        <span className="text-primary font-semibold">1st May 2026</span>
-      </p> */}
-
       <Reveal direction="up" delay={300}>
         <div className="max-w-xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
@@ -38,10 +32,16 @@ const ComingSoon = () => {
         </div>
       </Reveal>
       <Reveal direction="up" delay={300}>
-        <div className="max-w-xl mx-auto text-center pt-6">
+        <div className="pt-6 flex flex-col md:flex-row gap-4 justify-center">
           <Button
-            text="Get Started with Mijo"
-            onClick={() => handleScroll("started")}
+            text="Ride with Mijo"
+            bgColor="bg-white"
+            textColor="text-primary"
+            onClick={() => handleScroll("customers")}
+          />
+          <Button
+            text="Join as a Driver"
+            onClick={() => handleScroll("partners")}
           />
         </div>
       </Reveal>

@@ -5,6 +5,9 @@ import support from "../../assets/support.jpg";
 import bonus from "../../assets/bonus.jpg";
 import HeaderOne from "../../components/common/HeaderOne";
 import Reveal from "../../components/common/Reveal";
+import playStore from "../../assets/play-store.png";
+import appStore from "../../assets/app-store.png";
+import ActionButton from "../../components/common/ActionButton";
 
 const MijoPartners = () => {
   const partners = [
@@ -40,11 +43,25 @@ const MijoPartners = () => {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto space-y-8 p-6 py-[100px] lg:py-[120px]">
+    <div className="max-w-4xl mx-auto space-y-8 p-6 py-40 lg:py-[180px]">
       <HeaderOne
         title="Drive. Deliver. Earn – Become A Mijo Partner"
         subtitle="Join a growing network of trusted riders and couriers powering movement across Ghana. Whether you drive a car or ride a bike, Mijo gives you the tools and flexibility to earn on your terms."
       />
+      <Reveal direction="down" delay={200}>
+        <div className="flex justify-center gap-4">
+          <ActionButton
+            image={appStore}
+            text="App Store"
+            link="https://apps.apple.com/us/app/ghanapost-mijo-driver/id6464409910"
+          />
+          <ActionButton
+            image={playStore}
+            text="Play store"
+            link="https://play.google.com/store/apps/details?id=com.ghanapostgps.mijodriver&hl=en_US"
+          />
+        </div>
+      </Reveal>
       <div className="block lg:hidden space-y-4">
         {partners.map((p, index) => (
           <Reveal direction="down" key={index} delay={index * 150}>
