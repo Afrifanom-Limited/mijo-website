@@ -51,8 +51,11 @@ const PromoPopupController = () => {
     const hasParams = window.location.search.length > 0;
     const alreadyShown = sessionStorage.getItem(SESSION_KEY);
     if (!hasParams && !alreadyShown) {
-      setVisible(true);
-      sessionStorage.setItem(SESSION_KEY, "1");
+      const timer = setTimeout(() => {
+        setVisible(true);
+        sessionStorage.setItem(SESSION_KEY, "1");
+      }, 5000);
+      return () => clearTimeout(timer);
     }
   }, []);
 
