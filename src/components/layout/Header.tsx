@@ -53,6 +53,12 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
                 Businesses
               </li>
               <li
+                onClick={() => handleScroll("pricing")}
+                className="cursor-pointer hover:text-dark"
+              >
+                Pricing
+              </li>
+              <li
                 onClick={() => handleScroll("faqs")}
                 className="cursor-pointer hover:text-dark"
               >
@@ -99,6 +105,12 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
               className="cursor-pointer hover:text-dark"
             >
               Businesses
+            </li>
+            <li
+              onClick={() => handleScroll("pricing")}
+              className="cursor-pointer hover:text-dark"
+            >
+              Pricing
             </li>
             <li
               onClick={() => handleScroll("contact")}
