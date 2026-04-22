@@ -1,6 +1,5 @@
-// import Button from "../../components/common/Button";
 import Reveal from "../../components/common/Reveal";
-import handImage from "../../assets/hands2.png";
+import handImage from "../../assets/hand.jpeg";
 
 const HeroSection = () => {
   return (
@@ -37,7 +36,7 @@ const HeroSection = () => {
           </Reveal>
         </div>
         <div className="hidden lg:block pt-[100px]">
-          <img src={handImage} className="w-4/6 mx-auto" />
+          <img src={handImage} className="w-5/6 mx-auto" />
         </div>
       </div>
     </div>
