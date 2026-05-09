@@ -15,17 +15,17 @@ const ComingSoon = () => {
   return (
     <div className="mx-auto px-6 pt-[120px] lg:pt-[140px]">
       <HeaderOne
-        title="Mijo Is Coming to Accra"
+        title="Mijo Is Live !!"
         subtitle="Built by Ghanaians, for Ghanaians — Mijo is a new ride-hailing app launching in Accra. Get fast, reliable rides and smart deliveries, all in one place."
       />
       <Reveal direction="up" delay={300}>
         <div className="max-w-xl mx-auto text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
             <span className="text-sm font-medium text-primary">
               Launching 1st May 2026
             </span>
-          </div>
+          </div> */}
           <p className="text-gray-600 font-medium">
             Experience a better way to ride and deliver in Accra.
           </p>
