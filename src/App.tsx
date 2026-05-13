@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="relative">
-      <PromoPopup />
+      {/* <PromoPopup /> */}
       {showBanner && (
         <ComingSoonBanner onDismiss={() => setShowBanner(false)} />
       )}
