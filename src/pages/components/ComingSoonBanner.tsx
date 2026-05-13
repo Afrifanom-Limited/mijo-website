@@ -41,7 +41,8 @@ const ComingSoonBanner = ({ onDismiss }: { onDismiss: () => void }) => {
         <>
           <span className="text-secondary font-bold">🎉 We're Live!</span>
           <span className="hidden sm:inline text-white/80">
-            Mijo is now available — download the app today.
+            Mijo on GhanaPostGPS is now available — download the GhanaPostGPS
+            app today.
           </span>
         </>
       )}
