@@ -3,7 +3,6 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import LandingPage from "./pages/LandingPage";
 import ComingSoonBanner from "./pages/components/ComingSoonBanner";
-import PromoPopup from "./components/common/PromoPopup";
 
 function App() {
   const [showBanner, setShowBanner] = useState(true);
@@ -24,7 +23,6 @@ function App() {
 
   return (
     <div className="relative">
-      {/* <PromoPopup /> */}
       {showBanner && (
         <ComingSoonBanner onDismiss={() => setShowBanner(false)} />
       )}
