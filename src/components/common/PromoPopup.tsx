@@ -33,7 +33,7 @@ const PromoPopup = ({ onClose }: PromoPopupProps) => {
         <div className="flex items-center justify-center">
           <img
             src={comingsoon}
-            alt="Mijo promo"
+            alt="VaMijo promo"
             className="max-w-full h-auto object-contain"
           />
         </div>

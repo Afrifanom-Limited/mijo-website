@@ -3,14 +3,15 @@ import appStore from "../../assets/app-store.png";
 import ActionButton from "../../components/common/ActionButton";
 import HeaderOne from "../../components/common/HeaderOne";
 import Reveal from "../../components/common/Reveal";
+import { AppStoreLinks } from "../../utils";
 
 const GetStarted = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-8 p-6 py-40 lg:py-[180px]">
       <HeaderOne
-        title="Get Started with Mijo"
+        title="Get Started with VaMijo"
         subtitle="Built by Ghanaians, for Ghanaians.
-Download the GhanaPostGPS App, tap on MIJO and experience rides and delivery, the MIJO way.
+Download the VaMijo App, tap on VaMijo and experience rides and delivery, the VaMijo way.
 "
       />
       <Reveal direction="down" delay={200}>
@@ -18,12 +19,12 @@ Download the GhanaPostGPS App, tap on MIJO and experience rides and delivery, th
           <ActionButton
             image={appStore}
             text="App Store"
-            link="https://apps.apple.com/us/app/ghanapost-mijo-driver/id6464409910"
+            link={AppStoreLinks.APPLE}
           />
           <ActionButton
             image={playStore}
             text="Play store"
-            link="https://play.google.com/store/apps/details?id=com.ghanapostgps.mijodriver&hl=en_US"
+            link={AppStoreLinks.GOOGLE}
           />
         </div>
       </Reveal>

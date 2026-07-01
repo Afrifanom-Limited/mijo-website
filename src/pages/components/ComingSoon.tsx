@@ -15,8 +15,8 @@ const ComingSoon = () => {
   return (
     <div className="mx-auto px-6 pt-[120px] lg:pt-[140px]">
       <HeaderOne
-        title="Mijo Is Live !!"
-        subtitle="Built by Ghanaians, for Ghanaians — Mijo is a new ride-hailing app launching in Accra. Get fast, reliable rides and smart deliveries, all in one place."
+        title="VaMijo is Live !!"
+        subtitle="Built by Ghanaians, for Ghanaians — VaMijo is a new ride-hailing app available in Accra. Get fast, reliable rides and smart deliveries, all in one place."
       />
       <Reveal direction="up" delay={300}>
         <div className="max-w-xl mx-auto text-center space-y-6">
@@ -28,7 +28,7 @@ const ComingSoon = () => {
       <Reveal direction="up" delay={300}>
         <div className="pt-6 flex flex-col md:flex-row gap-4 justify-center">
           <Button
-            text="Ride with Mijo"
+            text="Ride with VaMijo"
             bgColor="bg-white"
             textColor="text-primary"
             onClick={() => handleScroll("customers")}

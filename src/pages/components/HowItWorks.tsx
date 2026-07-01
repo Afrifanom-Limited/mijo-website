@@ -19,23 +19,23 @@ const HowItWorks = () => {
     {
       step: 2,
       image: preferred,
-      title: "Select your preferred MIJO",
+      title: "Select your preferred VaMijo",
       subtitle:
         "Choose a standard car for a quick pick up,  an executive car for a more formal occasion or a motorbike or van depending on your delivery needs.",
     },
     {
       step: 3,
       image: book,
-      title: "Book your  MIJO",
+      title: "Book your  VaMijo",
       subtitle:
-        "Book your ride or delivery on MIJO and track your driver in real-time to your exact pickup location, with estimated time of arrivals to help you plan ahead.",
+        "Book your ride or delivery on VaMijo and track your driver in real-time to your exact pickup location, with estimated time of arrivals to help you plan ahead.",
     },
     {
       step: 4,
       image: arrived,
-      title: "Enjoy your MIJO",
+      title: "Enjoy your VaMijo",
       subtitle:
-        "Once your driver arrives, it’s time to sit back, relax, and enjoy the ride with GhanaPost Mijo..",
+        "Once your driver arrives, it’s time to sit back, relax, and enjoy the ride with VaMijo..",
     },
   ];
   return (

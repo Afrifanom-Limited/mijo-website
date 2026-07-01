@@ -28,7 +28,7 @@ const ComingSoonBanner = ({ onDismiss }: { onDismiss: () => void }) => {
     <div className="fixed top-0 left-0 right-0 z-60 bg-primary text-white text-sm flex items-center justify-center h-10 px-4 gap-4">
       {timeLeft ? (
         <>
-          <span className="sm:inline font-medium">Mijo is launching in:</span>
+          <span className="sm:inline font-medium">VaMijo is launching in:</span>
           <span className="font-mono font-semibold tracking-wide text-secondary">
             {timeLeft.days}d {pad(timeLeft.hours)}h {pad(timeLeft.minutes)}m{" "}
             {pad(timeLeft.seconds)}s
@@ -41,8 +41,7 @@ const ComingSoonBanner = ({ onDismiss }: { onDismiss: () => void }) => {
         <>
           <span className="text-secondary font-bold">🎉 We're Live!</span>
           <span className="hidden sm:inline text-white/80">
-            Mijo on GhanaPostGPS is now available — download the GhanaPostGPS
-            app today.
+            VaMijo is now available — download the VaMijo app today.
           </span>
         </>
       )}

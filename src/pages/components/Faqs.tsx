@@ -1,29 +1,30 @@
 import Accordion from "../../components/common/Accordion";
 import HeaderOne from "../../components/common/HeaderOne";
 import Reveal from "../../components/common/Reveal";
+import { SocialMediaLinks } from "../../utils";
 
 const Faqs = () => {
   const faqs = [
     {
-      title: "About MIJO",
+      title: "About VaMijo",
       questions: [
         {
-          title: "Why MIJO?",
+          title: "Why VaMijo?",
           content:
-            "MIJO is a Ghanaian-owned, tech-enabled delivery service integrated into the GhanaPostGPS app. The name 'MIJO' comes from an Ewe phrase meaning 'let’s go'. The service allows individuals and businesses to send packages securely and efficiently using precise digital addresses.",
+            "VaMijo is a Ghanaian-owned, tech-enabled delivery service. The name 'VaMijo' comes from an Ewe phrase meaning 'let’s go'. The service allows individuals and businesses to send packages securely and efficiently using precise digital addresses.",
         },
         {
-          title: "How do I download and install the MIJO app?",
+          title: "How do I download and install the VaMijo app?",
           content:
-            "MIJO is not a separate app. It is a feature within the updated GhanaPostGPS app. Existing users simply need to update the app. New users can download GhanaPostGPS from the Google Play Store or Apple App Store.",
+            "New users can download VaMijo from the Google Play Store or Apple App Store.",
         },
         {
           title: "How do I create an account?",
           content:
-            "If you already have the GhanaPostGPS app, just update it. New users can download the app and register using their Ghana Card and a valid Ghanaian phone number.",
+            "New users can download the app and register using their Ghana Card and a valid Ghanaian phone number.",
         },
         {
-          title: "How can I contact MIJO Services?",
+          title: "How can I contact VaMijo Services?",
           content: (
             <p>
               <ul className="flex gap-1">
@@ -45,7 +46,7 @@ const Faqs = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition hover:text-dark"
-                    href="https://x.com/mijoghofficial?s=11&t=fDCnd4rreXB_uIJWAyJIqA"
+                    href={SocialMediaLinks.TWITTER}
                     target="_blank"
                     aria-label="Twitter"
                   >
@@ -61,7 +62,7 @@ const Faqs = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition hover:text-dark"
-                    href="https://www.facebook.com/share/1DPUc2WJux/"
+                    href={SocialMediaLinks.FACEBOOK}
                     target="_blank"
                     aria-label="Facebook"
                   >
@@ -77,7 +78,7 @@ const Faqs = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition hover:text-dark"
-                    href="https://www.instagram.com/mijo_on_ghanapostgps?igsh=dGpmNXNmdW1sMjlw"
+                    href={SocialMediaLinks.INSTAGRAM}
                     target="_blank"
                     aria-label="Instagram"
                   >
@@ -94,7 +95,7 @@ const Faqs = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition hover:text-dark"
-                    href="https://www.tiktok.com/@mijo_on_ghanapostgps?_r=1&_t=ZS-95bzi9UC40a"
+                    href={SocialMediaLinks.TIKTOK}
                     target="_blank"
                     aria-label="TikTok"
                   >
@@ -119,7 +120,7 @@ const Faqs = () => {
         {
           title: "How do I request a delivery?",
           content:
-            "Open the GhanaPostGPS App, tap on 'MIJO Delivery', enter pickup and drop-off digital addresses, add a delivery note, and confirm your request.",
+            "Open the VaMijo App, tap on 'VaMijo Delivery', enter pickup and drop-off digital addresses, add a delivery note, and confirm your request.",
         },
         {
           title: "How are delivery fees calculated?",
@@ -129,7 +130,7 @@ const Faqs = () => {
         {
           title: "Can I cancel a delivery?",
           content:
-            "Yes, you can cancel for free before dispatch. A cancellation fee may apply if a Mijo Partner is already en route.",
+            "Yes, you can cancel for free before dispatch. A cancellation fee may apply if a VaMijo Partner is already en route.",
         },
         {
           title: "Can I change the destination after booking?",
@@ -138,7 +139,7 @@ const Faqs = () => {
         {
           title: "Can I schedule a delivery?",
           content:
-            "Currently, MIJO supports only on-demand deliveries. Scheduled deliveries will be introduced soon.",
+            "Currently, VaMijo supports only on-demand deliveries. Scheduled deliveries will be introduced soon.",
         },
       ],
     },
@@ -146,9 +147,9 @@ const Faqs = () => {
       title: "Account and Data",
       questions: [
         {
-          title: "How do I sign up for MIJO?",
+          title: "How do I sign up for VaMijo?",
           content:
-            "Use the GhanaPostGPS app with your Ghana Card and a valid phone number.",
+            "Use the VaMijo app with your Ghana Card and a valid phone number.",
         },
         {
           title: "How do I update my profile?",
@@ -162,7 +163,7 @@ const Faqs = () => {
         {
           title: "What security features are in place?",
           content:
-            "All Mijo Partners are vetted based on requested documents. Real-time tracking is available, and users can rate and give feedback on Mijo Partners in-app.",
+            "All VaMijo Partners are vetted based on requested documents. Real-time tracking is available, and users can rate and give feedback on VaMijo Partners in-app.",
         },
       ],
     },
@@ -172,7 +173,7 @@ const Faqs = () => {
         {
           title: "What payment methods are accepted?",
           content:
-            "MIJO Wallet, Mobile Money (MTN, Vodafone, AirtelTigo), and Cash.",
+            "VaMijo Wallet, Mobile Money (MTN, Vodafone, AirtelTigo), and Cash.",
         },
         {
           title: "Why is my price higher than expected?",
@@ -192,7 +193,7 @@ const Faqs = () => {
       ],
     },
     {
-      title: "Using MIJO",
+      title: "Using VaMijo",
       questions: [
         {
           title: "How do I contact the delivery partner?",
@@ -202,22 +203,22 @@ const Faqs = () => {
         {
           title: "What if the delivery partner's vehicle is in poor condition?",
           content:
-            "Report the issue using the rating and feedback feature or contact MIJO support.",
+            "Report the issue using the rating and feedback feature or contact VaMijo support.",
         },
         {
           title: "What safety features are in place?",
           content:
-            "Mijo Partner and vehicle details are shared, and each delivery request includes a PIN code.",
+            "VaMijo Partner and vehicle details are shared, and each delivery request includes a PIN code.",
         },
         {
           title: "How can I track my driver?",
           content:
-            "Tracking starts once the Mijo Partner accepts your request.",
+            "Tracking starts once the VaMijo Partner accepts your request.",
         },
         {
           title: "What if I cancel my delivery?",
           content:
-            "There is no charge if cancelled before dispatch. A cancellation fee applies if the Mijo Partner is already en route.",
+            "There is no charge if cancelled before dispatch. A cancellation fee applies if the VaMijo Partner is already en route.",
         },
         {
           title: "How do I rate my experience?",
@@ -244,9 +245,9 @@ const Faqs = () => {
       title: "Partner / Driver",
       questions: [
         {
-          title: "How do I become a MIJO Partner?",
+          title: "How do I become a VaMijo Partner?",
           content:
-            "Download the MIJO Partner App, register with valid documents, and begin delivering after approval.",
+            "Download the VaMijo Partner App, register with valid documents, and begin delivering after approval.",
         },
         {
           title: "How does the Partner App work?",
@@ -256,7 +257,7 @@ const Faqs = () => {
         {
           title: "What if I encounter a difficult customer?",
           content:
-            "Use the in-app contact options or report the incident to MIJO support.",
+            "Use the in-app contact options or report the incident to VaMijo support.",
         },
         {
           title: "How much do I pay to start working?",

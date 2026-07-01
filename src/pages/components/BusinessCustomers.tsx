@@ -11,7 +11,7 @@ const BusinessCustomers = () => {
     {
       title: "On-Demand Delivery Fleet	",
       subtitle:
-        "Tap into Mijo’s network of trained couriers and riders to deliver goods quickly without hiring your own fleet.",
+        "Tap into VaMijo’s network of trained couriers and riders to deliver goods quickly without hiring your own fleet.",
       icon: delivery,
     },
     {
@@ -36,10 +36,10 @@ const BusinessCustomers = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-12 p-6 py-40 lg:py-[180px]">
       <HeaderOne
-        title="Partner with Mijo to Power Your Business Logistics"
+        title="Partner with VaMijo to Power Your Business Logistics"
         subtitle="Scale your delivery operations, boost customer satisfaction, and grow
-          revenue by partnering with Mijo. Whether you run a retail store,
-          pharmacy, e-commerce shop, or restaurant, Mijo helps you move smarter."
+          revenue by partnering with VaMijo. Whether you run a retail store,
+          pharmacy, e-commerce shop, or restaurant, VaMijo helps you move smarter."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {customers.map((c, index) => (

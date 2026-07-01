@@ -1,4 +1,4 @@
-import logo from "../../assets/noBgLogo.png";
+import logo from "../../assets/logo.png";
 
 const Logo = ({ width = 40 }: { width?: number }) => {
   return <img src={logo} width={width} />;

@@ -9,13 +9,14 @@ import HeaderOne from "../../components/common/HeaderOne";
 import ActionButton from "../../components/common/ActionButton";
 import playStore from "../../assets/play-store.png";
 import appStore from "../../assets/app-store.png";
+import { AppStoreLinks } from "../../utils";
 
 const Customers = () => {
   const features = [
     {
       title: "Precise Location Pickup & Drop-off",
       content:
-        "Use digital addresses for your exact location. Pickups, drop-offs and deliveries are a breeze on Mijo.",
+        "Use digital addresses for your exact location. Pickups, drop-offs and deliveries are a breeze on VaMijo.",
       icon: tracker,
     },
     {
@@ -57,7 +58,7 @@ const Customers = () => {
           <div className="space-y-6">
             <HeaderOne
               title="Everything You Need in One App"
-              subtitle="Whether you’re a rider or sender, Mijo’s powerful
+              subtitle="Whether you’re a rider or sender, VaMijo’s powerful
             features keep things smooth, safe, and simple."
             />
             <Reveal direction="down" delay={200}>
@@ -65,12 +66,12 @@ const Customers = () => {
                 <ActionButton
                   image={appStore}
                   text="App Store"
-                  link="https://apps.apple.com/us/app/ghanapostgps/id1296627307?ls=1"
+                  link={AppStoreLinks.APPLE}
                 />
                 <ActionButton
                   image={playStore}
                   text="Play store"
-                  link="https://play.google.com/store/apps/details?id=com.ghanapostgps.ghanapost&hl=en"
+                  link={AppStoreLinks.GOOGLE}
                 />
               </div>
             </Reveal>

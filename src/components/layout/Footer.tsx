@@ -1,3 +1,4 @@
+import { SocialMediaLinks } from "../../utils";
 import Logo from "../common/Logo";
 
 const Footer = () => {
@@ -120,7 +121,7 @@ const Footer = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition-transform transform hover:-translate-y-1  hover:text-dark"
-                    href="https://x.com/mijoghofficial?s=11&t=fDCnd4rreXB_uIJWAyJIqA"
+                    href={SocialMediaLinks.TWITTER}
                     target="_blank"
                     aria-label="Twitter"
                   >
@@ -136,7 +137,7 @@ const Footer = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition-transform transform hover:-translate-y-1 hover:text-dark"
-                    href="https://www.facebook.com/share/1DPUc2WJux/"
+                    href={SocialMediaLinks.FACEBOOK}
                     target="_blank"
                     aria-label="Facebook"
                   >
@@ -152,7 +153,7 @@ const Footer = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition-transform transform hover:-translate-y-1 hover:text-dark"
-                    href="https://www.instagram.com/mijo_on_ghanapostgps?igsh=dGpmNXNmdW1sMjlw"
+                    href={SocialMediaLinks.INSTAGRAM}
                     target="_blank"
                     aria-label="Instagram"
                   >
@@ -169,7 +170,7 @@ const Footer = () => {
                 <li>
                   <a
                     className="flex items-center justify-center text-primary transition-transform transform hover:-translate-y-1 hover:text-dark"
-                    href="https://www.tiktok.com/@mijo_on_ghanapostgps?_r=1&_t=ZS-95bzi9UC40a"
+                    href={SocialMediaLinks.TIKTOK}
                     target="_blank"
                     aria-label="TikTok"
                   >
@@ -179,6 +180,22 @@ const Footer = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path d="M21.5 6c.3 1.8 1.5 3.3 3.3 3.8v3.1c-1.3 0-2.6-.4-3.7-1.1v6.3c0 3.6-2.9 6.4-6.5 6.4S8 21.7 8 18.1s2.9-6.4 6.5-6.4c.4 0 .8 0 1.2.1v3.3c-.4-.1-.8-.2-1.2-.2-1.7 0-3.1 1.4-3.1 3.2s1.4 3.2 3.1 3.2 3.1-1.4 3.1-3.2V6h3.9Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="flex items-center justify-center text-primary transition-transform transform hover:-translate-y-1 hover:text-dark"
+                    href={SocialMediaLinks.TIKTOK}
+                    target="_blank"
+                    aria-label="TikTok"
+                  >
+                    <svg
+                      className="h-8 w-8 fill-current"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M23.498 6.186a2.997 2.997 0 0 0-2.11-2.12C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.388.566a2.997 2.997 0 0 0-2.11 2.12C0 8.083 0 12 0 12s0 3.917.502 5.814a2.997 2.997 0 0 0 2.11 2.12C4.495 20.5 12 20.5 12 20.5s7.505 0 9.388-.566a2.997 2.997 0 0 0 2.11-2.12C24 15.917 24 12 24 12s0-3.917-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                     </svg>
                   </a>
                 </li>
