@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import comingsoon from "../../assets/logo.png";
+import comingsoon from "../../assets/transition.jpeg";
 
 interface PromoPopupProps {
   onClose: () => void;

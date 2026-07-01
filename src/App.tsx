@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import LandingPage from "./pages/LandingPage";
 import ComingSoonBanner from "./pages/components/ComingSoonBanner";
+import PromoPopupController from "./components/common/PromoPopup";
 
 function App() {
   const [showBanner, setShowBanner] = useState(true);
@@ -27,6 +28,7 @@ function App() {
         <ComingSoonBanner onDismiss={() => setShowBanner(false)} />
       )}
       <Header topOffset={showBanner ? 40 : 0} />
+      <PromoPopupController />
       <div
         className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
         id="top"
