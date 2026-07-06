@@ -2,18 +2,26 @@ import { useState, useEffect } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import LandingPage from "./pages/LandingPage";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ComingSoonBanner from "./pages/components/ComingSoonBanner";
 import PromoPopupController from "./components/common/PromoPopup";
+import { useLocation } from "./router";
 
 function App() {
   const [showBanner, setShowBanner] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const pathname = useLocation();
 
   useEffect(() => {
     const onScroll = () => setShowScrollTop(window.scrollY > 300);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
@@ -33,7 +41,13 @@ function App() {
         className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
         id="top"
       >
-        <LandingPage />
+        {pathname === "/terms" ? (
+          <TermsOfService />
+        ) : pathname === "/privacy" ? (
+          <PrivacyPolicy />
+        ) : (
+          <LandingPage />
+        )}
         <Footer />
       </div>
       <button

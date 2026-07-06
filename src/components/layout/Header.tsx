@@ -2,17 +2,12 @@ import { useState } from "react";
 import Logo from "../common/Logo";
 import { Menu, X } from "lucide-react";
 import Button from "../common/Button";
+import { goToSection, navigate } from "../../router";
 
 export default function Header({ topOffset = 0 }: { topOffset?: number }) {
   const [open, setOpen] = useState(false);
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const handleScroll = (id: string) => {
-    scrollToSection(id);
+    goToSection(id);
     setOpen(false);
   };
 
@@ -23,7 +18,7 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
     >
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between mt-4">
         <div className="flex-1/5">
-          <Logo width={80} />
+          <Logo width={80} onClick={() => navigate("/")} />
         </div>
         <div className="hidden md:flex md:flex-3/5 justify-center">
           <nav className="hidden md:flex bg-white rounded-full px-6 py-2 shadow-inner border border-blue-100">

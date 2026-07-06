@@ -1,17 +1,12 @@
 import { SocialMediaLinks } from "../../utils";
 import Logo from "../common/Logo";
+import { navigate, goToSection } from "../../router";
 
 const Footer = () => {
   const border = true;
   const year = new Date().getFullYear();
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   const handleScroll = (id: string) => {
-    scrollToSection(id);
+    goToSection(id);
   };
 
   return (
@@ -97,8 +92,12 @@ const Footer = () => {
                 <li>
                   <a
                     className="text-gray-600 transition hover:text-gray-900"
-                    href="https://mijoride.ghanapostgps.com/info-driver/terms-and-conditions"
-                    target="_blank"
+                    href="/terms"
+                    // href="https://mijoride.ghanapostgps.com/info-driver/terms-and-conditions"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate("/terms");
+                    }}
                   >
                     Terms of Service
                   </a>
@@ -106,8 +105,12 @@ const Footer = () => {
                 <li>
                   <a
                     className="text-gray-600 transition hover:text-gray-900"
-                    href="https://mijoride.ghanapostgps.com/info-driver/privacy-policy/"
-                    target="_blank"
+                    href="/privacy"
+                    // href="https://mijoride.ghanapostgps.com/info-driver/privacy-policy/"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate("/privacy");
+                    }}
                   >
                     Privacy Policy
                   </a>
