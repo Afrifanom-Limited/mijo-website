@@ -117,7 +117,7 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20 lg:py-[100px] space-y-12">
+    <div className="max-w-4xl mx-auto px-6 py-40 lg:py-[180px] space-y-12">
       <HeaderOne
         title="Contact Us"
         subtitle="Have a question or need support? Reach out to us through any of the channels below."
