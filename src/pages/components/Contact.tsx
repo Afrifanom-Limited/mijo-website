@@ -5,8 +5,8 @@ import { SocialMediaLinks } from "../../utils";
 const contactItems = [
   {
     label: "Email",
-    value: "support@drive.ghanapostgps.com",
-    href: "mailto:support@drive.ghanapostgps.com",
+    value: "support@vamijogh.com",
+    href: "mailto:support@vamijogh.com",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -19,16 +19,20 @@ export const useLocation = () => {
 };
 
 export const goToSection = (id: string) => {
+  navigateToSection("/", id);
+};
+
+export const navigateToSection = (path: string, id: string) => {
   const scroll = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
-  if (window.location.pathname === "/") {
+  if (window.location.pathname === path) {
     scroll();
     return;
   }
 
-  navigate("/");
+  navigate(path);
   let attempts = 0;
   const tryScroll = () => {
     if (document.getElementById(id)) {

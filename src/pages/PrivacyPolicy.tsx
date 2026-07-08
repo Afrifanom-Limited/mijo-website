@@ -1,4 +1,5 @@
 import Section from "../components/common/Section";
+import { navigate, navigateToSection } from "../router";
 
 const clauses: { title: string; content: React.ReactNode }[] = [
   {
@@ -82,19 +83,61 @@ const clauses: { title: string; content: React.ReactNode }[] = [
         <ul className="text-gray-600 space-y-1">
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
-            Terms and Conditions
+            <a
+              href="/terms"
+              className="text-primary hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate("/terms");
+              }}
+            >
+              Terms and Conditions
+            </a>
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
-            Partner Terms
+            <a
+              href="/terms#driver-and-delivery-partner-terms"
+              className="text-primary hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection(
+                  "/terms",
+                  "driver-and-delivery-partner-terms",
+                );
+              }}
+            >
+              Partner Terms
+            </a>
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
-            Business Account Terms
+            <a
+              href="/terms#business-account-terms"
+              className="text-primary hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection("/terms", "business-account-terms");
+              }}
+            >
+              Business Account Terms
+            </a>
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
-            Refund Policy
+            <a
+              href="/terms#cancellations-failed-services-and-refunds"
+              className="text-primary hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection(
+                  "/terms",
+                  "cancellations-failed-services-and-refunds",
+                );
+              }}
+            >
+              Refund Policy
+            </a>
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
@@ -102,7 +145,19 @@ const clauses: { title: string; content: React.ReactNode }[] = [
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
-            Community Guidelines
+            <a
+              href="/terms#community-standards-and-prohibited-conduct"
+              className="text-primary hover:underline"
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection(
+                  "/terms",
+                  "community-standards-and-prohibited-conduct",
+                );
+              }}
+            >
+              Community Guidelines
+            </a>
           </li>
           <li>
             <span className="font-medium text-dark pr-2">✓</span>
@@ -294,9 +349,7 @@ const clauses: { title: string; content: React.ReactNode }[] = [
           <li>how long we retain it.</li>
         </ul>
 
-        <h4 className="font-semibold text-dark pt-3">
-          2.3 Purpose Limitation
-        </h4>
+        <h4 className="font-semibold text-dark pt-3">2.3 Purpose Limitation</h4>
         <p className="text-gray-600 leading-relaxed">
           Information collected for one legitimate business purpose will not be
           used for unrelated purposes without additional legal justification or
@@ -330,9 +383,7 @@ const clauses: { title: string; content: React.ReactNode }[] = [
           privacy obligations and confidentiality requirements.
         </p>
 
-        <h4 className="font-semibold text-dark pt-3">
-          2.8 Privacy by Design
-        </h4>
+        <h4 className="font-semibold text-dark pt-3">2.8 Privacy by Design</h4>
         <p className="text-gray-600 leading-relaxed">
           Privacy considerations are integrated throughout the design,
           development and deployment of VaMijo products, ensuring that data
@@ -387,16 +438,14 @@ const clauses: { title: string; content: React.ReactNode }[] = [
         <p>
           <span className="font-medium text-dark">Location Information</span> —
           Information identifying the geographic position of your device using
-          technologies including GPS, Wi-Fi, cellular networks or other
-          location services.
+          technologies including GPS, Wi-Fi, cellular networks or other location
+          services.
         </p>
         <p>
-          <span className="font-medium text-dark">
-            Personal Information
-          </span>{" "}
-          — Any information relating to an identified or identifiable natural
-          person, including information that can directly or indirectly
-          identify that individual.
+          <span className="font-medium text-dark">Personal Information</span> —
+          Any information relating to an identified or identifiable natural
+          person, including information that can directly or indirectly identify
+          that individual.
         </p>
         <p>
           <span className="font-medium text-dark">Processing</span> — Any
@@ -434,9 +483,9 @@ const clauses: { title: string; content: React.ReactNode }[] = [
     content: (
       <div>
         <p className="text-gray-600 leading-relaxed">
-          The information collected depends on how you interact with VaMijo,
-          the services you use and the permissions you grant. We collect
-          information in four primary ways:
+          The information collected depends on how you interact with VaMijo, the
+          services you use and the permissions you grant. We collect information
+          in four primary ways:
         </p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Information you provide directly.</li>
@@ -756,8 +805,8 @@ const clauses: { title: string; content: React.ReactNode }[] = [
         <p className="font-medium text-dark pt-2">Interaction Data</p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>
-            Communication between customers and drivers (via in-app messaging
-            or masked calls)
+            Communication between customers and drivers (via in-app messaging or
+            masked calls)
           </li>
           <li>Ride or delivery cancellations and reasons</li>
           <li>Dispute records</li>
@@ -787,9 +836,7 @@ const clauses: { title: string; content: React.ReactNode }[] = [
           <li>Historical trips locations data</li>
         </ul>
 
-        <p className="font-medium text-dark pt-2">
-          How Location Data is Used
-        </p>
+        <p className="font-medium text-dark pt-2">How Location Data is Used</p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Matching customers with nearby drivers</li>
           <li>Navigation and route optimization</li>
@@ -827,9 +874,7 @@ const clauses: { title: string; content: React.ReactNode }[] = [
           <li>Crash reports and diagnostics</li>
         </ul>
 
-        <p className="font-medium text-dark pt-2">
-          Permissions We May Request
-        </p>
+        <p className="font-medium text-dark pt-2">Permissions We May Request</p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Location access (for ride matching and navigation)</li>
           <li>
@@ -895,7 +940,9 @@ const clauses: { title: string; content: React.ReactNode }[] = [
 
         <p className="font-medium text-dark pt-2">Types of Communication</p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
-          <li>Transactional messages (ride confirmations, receipts, updates)</li>
+          <li>
+            Transactional messages (ride confirmations, receipts, updates)
+          </li>
           <li>Service notifications (account alerts, security notices)</li>
           <li>Customer support responses</li>
           <li>Promotional and marketing communications (with consent)</li>
@@ -984,8 +1031,8 @@ const clauses: { title: string; content: React.ReactNode }[] = [
 
         <p className="font-medium text-dark pt-2">With Other Users</p>
         <p className="text-gray-600 leading-relaxed">
-          Customers and drivers share limited information necessary to
-          complete rides or deliveries (e.g., name, phone number, location).
+          Customers and drivers share limited information necessary to complete
+          rides or deliveries (e.g., name, phone number, location).
         </p>
 
         <p className="font-medium text-dark pt-2">With Service Providers</p>
@@ -1046,8 +1093,8 @@ const clauses: { title: string; content: React.ReactNode }[] = [
     content: (
       <div>
         <p className="text-gray-600 leading-relaxed">
-          VaMijo implements appropriate technical and organizational measures
-          to protect personal information, including:
+          VaMijo implements appropriate technical and organizational measures to
+          protect personal information, including:
         </p>
         <ul className="list-disc list-inside text-gray-600 space-y-1">
           <li>Encryption of sensitive data</li>
@@ -1091,10 +1138,10 @@ const clauses: { title: string; content: React.ReactNode }[] = [
     title: "International Data Transfers",
     content: (
       <p className="text-gray-600 leading-relaxed">
-        Where necessary, VaMijo may transfer personal information outside
-        Ghana to trusted service providers or partners. In such cases, we
-        ensure that appropriate safeguards are in place to protect your
-        information in accordance with applicable data protection laws.
+        Where necessary, VaMijo may transfer personal information outside Ghana
+        to trusted service providers or partners. In such cases, we ensure that
+        appropriate safeguards are in place to protect your information in
+        accordance with applicable data protection laws.
       </p>
     ),
   },
@@ -1102,10 +1149,10 @@ const clauses: { title: string; content: React.ReactNode }[] = [
     title: "Children's Privacy",
     content: (
       <p className="text-gray-600 leading-relaxed">
-        VaMijo services are not intended for individuals under the age of 18.
-        We do not knowingly collect personal information from minors. If we
-        become aware that such information has been collected, we will take
-        steps to delete it promptly.
+        VaMijo services are not intended for individuals under the age of 18. We
+        do not knowingly collect personal information from minors. If we become
+        aware that such information has been collected, we will take steps to
+        delete it promptly.
       </p>
     ),
   },
