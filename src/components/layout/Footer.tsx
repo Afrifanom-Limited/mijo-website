@@ -84,7 +84,8 @@ const Footer = () => {
                 <li>
                   <a
                     className="text-gray-600 transition hover:text-gray-900"
-                    href="#0"
+                    href="https://www.afrifanom.com/aboutus"
+                    target="_blank"
                   >
                     About Us
                   </a>
@@ -93,7 +94,6 @@ const Footer = () => {
                   <a
                     className="text-gray-600 transition hover:text-gray-900"
                     href="/terms"
-                    // href="https://mijoride.ghanapostgps.com/info-driver/terms-and-conditions"
                     onClick={(e) => {
                       e.preventDefault();
                       navigate("/terms");
