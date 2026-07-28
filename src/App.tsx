@@ -6,7 +6,7 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ComingSoonBanner from "./pages/components/ComingSoonBanner";
 import PromoPopupController from "./components/common/PromoPopup";
-import { useLocation } from "./router";
+import { useLocation, scrollToHashOnLoad } from "./router";
 
 function App() {
   const [showBanner, setShowBanner] = useState(true);
@@ -20,7 +20,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (!scrollToHashOnLoad()) {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   const scrollToSection = (id: string) => {
