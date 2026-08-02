@@ -7,6 +7,6 @@ export const SocialMediaLinks = {
 };
 
 export const AppStoreLinks = {
-  APPLE: "https://apps.apple.com/us/app/ghanapostgps/id1296627307?ls=1",
+  APPLE: "https://apps.apple.com/us/app/vamijo/id6781267714",
   GOOGLE: "https://play.google.com/store/apps/details?id=com.afrifanom.vamijo",
 };
