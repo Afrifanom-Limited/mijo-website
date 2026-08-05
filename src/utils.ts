@@ -11,4 +11,19 @@ export const AppStoreLinks = {
   GOOGLE: "https://play.google.com/store/apps/details?id=com.afrifanom.vamijo",
   DRIVER_APPLE: "https://apps.apple.com/us/app/vamijo-driver/id6464409910",
   DRIVER_GOOGLE: "https://play.google.com/store/search?q=vamijo+driver&c=apps",
+  REDIRECT_USER: "https://www.shorturl.at/WwcOV",
+};
+
+export const getAppStoreLink = (variant: "rider" | "driver" = "rider") => {
+  const isIOS =
+    typeof navigator !== "undefined" &&
+    /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  return variant === "driver"
+    ? isIOS
+      ? AppStoreLinks.DRIVER_APPLE
+      : AppStoreLinks.DRIVER_GOOGLE
+    : isIOS
+      ? AppStoreLinks.APPLE
+      : AppStoreLinks.GOOGLE;
 };
