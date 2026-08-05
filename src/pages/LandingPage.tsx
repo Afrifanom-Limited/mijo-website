@@ -1,5 +1,5 @@
 import BusinessCustomers from "./components/BusinessCustomers";
-import ComingSoon from "./components/ComingSoon";
+// import ComingSoon from "./components/ComingSoon";
 import Contact from "./components/Contact";
 import Customers from "./components/Customers";
 import Faqs from "./components/Faqs";
@@ -12,9 +12,9 @@ import MijoPartners from "./components/MijoPartners";
 const LandingPage = () => {
   return (
     <div className="space-y-8 lg:space-y-24 pb-24" id="">
-      <section className="">
+      {/* <section className="">
         <ComingSoon />
-      </section>
+      </section> */}
       <HeroSection />
       <section id="features" className="">
         <Features />
