@@ -54,12 +54,12 @@ const MijoPartners = () => {
           <ActionButton
             image={appStore}
             text="App Store"
-            link={AppStoreLinks.APPLE}
+            link={AppStoreLinks.DRIVER_APPLE}
           />
           <ActionButton
             image={playStore}
             text="Play store"
-            link={AppStoreLinks.GOOGLE}
+            link={AppStoreLinks.DRIVER_GOOGLE}
           />
         </div>
       </Reveal>
