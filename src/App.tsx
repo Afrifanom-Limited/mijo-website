@@ -4,12 +4,12 @@ import Footer from "./components/layout/Footer";
 import LandingPage from "./pages/LandingPage";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ComingSoonBanner from "./pages/components/ComingSoonBanner";
-import PromoPopupController from "./components/common/PromoPopup";
+// import ComingSoonBanner from "./pages/components/ComingSoonBanner";
+// import PromoPopupController from "./components/common/PromoPopup";
 import { useLocation, scrollToHashOnLoad } from "./router";
 
 function App() {
-  const [showBanner, setShowBanner] = useState(true);
+  // const [showBanner, setShowBanner] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const pathname = useLocation();
 
@@ -34,13 +34,15 @@ function App() {
 
   return (
     <div className="relative">
-      {showBanner && (
+      {/* {showBanner && (
         <ComingSoonBanner onDismiss={() => setShowBanner(false)} />
-      )}
-      <Header topOffset={showBanner ? 40 : 0} />
-      <PromoPopupController />
+      )} */}
+      {/* <Header topOffset={showBanner ? 40 : 0} /> */}
+      <Header topOffset={0} />
+      {/* <PromoPopupController /> */}
       <div
-        className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
+        // className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
+        className={`transition-all duration-300`}
         id="top"
       >
         {pathname === "/terms" ? (
