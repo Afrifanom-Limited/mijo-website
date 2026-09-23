@@ -15,7 +15,7 @@ const Button = ({
     <button
       className={`${bgColor} ${textColor} ${
         icon ? "flex gap-2 items-center" : ""
-      } hover:bg-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer`}
+      } hover:bg-dark  px-8 py-3 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer`}
       onClick={onClick}
     >
       {text}

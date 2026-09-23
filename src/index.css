@@ -11,6 +11,9 @@ body {
   font-weight: 400;
   font-style: normal;
   font-optical-sizing: auto;
+}
+
+.landing-tint {
   background: #d4eef73e;
 }
 
@@ -29,12 +32,54 @@ body {
   }
 }
 
-.card-gradient {
-  background: #c7e8f2;
-  background: linear-gradient(
-    320deg,
-    rgba(199, 232, 242, 1) 0%,
-    rgba(235, 240, 242, 1) 83%,
-    rgba(255, 255, 255, 1) 100%
+.gradientDiv {
+  position: relative;
+  overflow: hidden;
+  /* background: #cbeaf5; */
+  background: #e6f4f9;
+  isolation: isolate;
+}
+
+.gradientDiv::before,
+.gradientDiv::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(110px);
+}
+
+.gradientDiv::before {
+  width: 650px;
+  height: 650px;
+  top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 0%,
+    var(--color-primary-200) 55%,
+    transparent 75%
   );
+  opacity: 0.55;
+}
+
+.gradientDiv::after {
+  width: 700px;
+  height: 700px;
+  top: 60%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    var(--color-secondary) 0%,
+    transparent 75%
+  );
+  opacity: 0.5;
+}
+
+.gradientDiv > * {
+  position: relative;
+  z-index: 1;
 }

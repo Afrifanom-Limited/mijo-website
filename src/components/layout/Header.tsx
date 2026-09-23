@@ -25,37 +25,37 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
             <ul className="flex items-center gap-6 text-gray-700 text-sm font-medium">
               <li
                 onClick={() => handleScroll("features")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 Features
               </li>
               <li
                 onClick={() => handleScroll("customers")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 Riders
               </li>
               <li
                 onClick={() => handleScroll("partners")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 Drivers
               </li>
               <li
                 onClick={() => handleScroll("business")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 Businesses
               </li>
               <li
                 onClick={() => handleScroll("pricing")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 Pricing
               </li>
               <li
                 onClick={() => handleScroll("faqs")}
-                className="cursor-pointer hover:text-dark"
+                className="cursor-pointer hover:text-primary"
               >
                 FAQs
               </li>
