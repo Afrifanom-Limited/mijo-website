@@ -11,7 +11,7 @@ const VendorHero = () => {
       className={`px-4 md:px-12 lg:px-24 py-20 md:pb-24 md:pt-36 lg:pb-12 xl:py-[120px] bg-[#e6f4f9] gradientDiv`}
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col justify-center gap-4">
+        <div className="flex flex-col gap-4 items-center lg:items-start justify-center">
           <p className="text-[30px] font-bold">
             Manage deliveries without writing a line of code.
           </p>

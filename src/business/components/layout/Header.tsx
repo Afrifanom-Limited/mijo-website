@@ -52,7 +52,7 @@ export default function Header() {
         <div className="hidden md:flex justify-end flex-1/5">
           <Button
             onClick={() => handleScroll("business-contact")}
-            text="Contact Sales"
+            text="Contact Us"
           />
         </div>
         <button

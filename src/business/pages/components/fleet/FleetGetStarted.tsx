@@ -10,7 +10,7 @@ const FleetGetStarted = () => {
       <div className="max-w-7xl mx-auto rounded-3xl bg-[#e6f4f9] h-[400px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
           <div className="flex flex-col lg:w-[80%] ml-auto lg:px-16 justify-center items-center md:items-start p-6  space-y-4">
-            <p className="font-bold text-4xl">
+            <p className="text-center md:text-left font-bold text-4xl">
               Ready to put your fleet to work?
             </p>
             <p className="text-center md:text-left text-lg">
@@ -18,7 +18,7 @@ const FleetGetStarted = () => {
               receiving ride and rental requests.
             </p>
             <Button
-              text="Talk to sales"
+              text="Talk to us"
               icon={<MoveUpRight size={16} />}
               textColor="w-fit text-white"
               onClick={() =>

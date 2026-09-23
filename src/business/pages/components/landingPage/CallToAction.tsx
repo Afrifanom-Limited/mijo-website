@@ -20,7 +20,7 @@ const CallToAction = () => {
             VaMijo can help you build a better delivery experience.
           </p>
           <Button
-            text="Talk to sales"
+            text="Talk to us"
             icon={<MoveRight />}
             onClick={() => {
               handleScroll("business-contact");

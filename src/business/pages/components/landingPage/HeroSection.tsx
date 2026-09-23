@@ -95,7 +95,7 @@ const HeroSection = () => {
             {slides[current].subtitle}
           </p>
           <Button
-            text="Contact Sales"
+            text="Contact Us"
             icon={<ArrowUpRight size={18} />}
             onClick={() => handleScroll("business-contact")}
           />

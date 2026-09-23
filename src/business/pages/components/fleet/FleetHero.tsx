@@ -11,11 +11,11 @@ const FleetHero = () => {
   return (
     <div className="px-4 md:px-12 lg:px-24 py-20 md:pb-24 md:pt-36 lg:pb-24 xl:py-[120px] bg-[#e6f4f9] gradientDiv">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col justify-center gap-4 h-full">
-          <p className="text-[30px] font-bold">
+        <div className="flex flex-col gap-4 items-center lg:items-start justify-center">
+          <p className="text-center md:text-left text-[30px] font-bold">
             Put your entire fleet to work on VaMijo.
           </p>
-          <p className="text-[18px]">
+          <p className="text-center md:text-left text-[18px]">
             Register your vehicles, delegate to fleet managers, and assign
             drivers and vehicles to rides or time-based rentals — all from one
             VaMijo Fleet account.
