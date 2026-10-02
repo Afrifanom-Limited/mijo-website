@@ -5,7 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import ComingSoonBanner from "./pages/components/ComingSoonBanner";
-// import PromoPopupController from "./components/common/PromoPopup";
+import PromoPopupController from "./components/common/PromoPopup";
 import { useLocation, scrollToHashOnLoad } from "./router";
 import BusinessHeader from "./business/components/layout/Header";
 import BusinessFooter from "./business/components/layout/Footer";
@@ -28,7 +28,8 @@ function App() {
   // const [showBanner, setShowBanner] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const pathname = useLocation();
-  const isBusiness = pathname === "/business" || pathname.startsWith("/business/");
+  const isBusiness =
+    pathname === "/business" || pathname.startsWith("/business/");
 
   useEffect(() => {
     const onScroll = () => setShowScrollTop(window.scrollY > 300);
@@ -44,7 +45,8 @@ function App() {
 
   useEffect(() => {
     document.title =
-      titles[pathname] ?? (isBusiness ? "VaMijo Business" : "VaMijo - Ride, Deliver, Earn");
+      titles[pathname] ??
+      (isBusiness ? "VaMijo Business" : "VaMijo - Ride, Deliver, Earn");
   }, [pathname, isBusiness]);
 
   const scrollToSection = (id: string) => {
@@ -111,7 +113,7 @@ function App() {
       )} */}
       {/* <Header topOffset={showBanner ? 40 : 0} /> */}
       <Header topOffset={0} />
-      {/* <PromoPopupController /> */}
+      <PromoPopupController />
       <div
         // className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
         className="landing-tint transition-all duration-300"
