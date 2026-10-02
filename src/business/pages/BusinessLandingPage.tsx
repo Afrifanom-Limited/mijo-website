@@ -7,6 +7,7 @@ import HeroSection from "./components/landingPage/HeroSection";
 import VendorSection from "./components/landingPage/VendorSection";
 import Questions from "./components/landingPage/Questions";
 import Contact from "./components/landingPage/Contact";
+import { navigateToSection } from "../../router";
 
 const BusinessLandingPage = () => {
   const faqs = [
@@ -43,6 +44,9 @@ const BusinessLandingPage = () => {
         "Both. VaMijo Fleet gives you a live view of every vehicle you operate, on route, under maintenance, or offline  so you can assign drivers and monitor performance across your whole operation, not just one delivery at a time.",
     },
   ];
+  const handleScroll = (id: string) => {
+    navigateToSection("/business", id);
+  };
   return (
     <div className="" id="">
       <HeroSection />
@@ -65,7 +69,14 @@ const BusinessLandingPage = () => {
         <Questions />
       </section>
       <section id="business-cta" className="">
-        <CallToAction />
+        <CallToAction
+          title="Ready to Move Your Business"
+          subtitle=" Whether you need fleet management, delivery operations or seamless
+            API integration, <br />
+            VaMijo can help you build a better delivery experience."
+          buttonText="Talk to us"
+          onClick={() => handleScroll("business-contact")}
+        />
       </section>
       <section id="business-contact" className="">
         <Contact />

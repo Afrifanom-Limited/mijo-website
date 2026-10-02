@@ -45,7 +45,7 @@ const DeveloperPage = () => {
         <DevSteps />
       </section>
       <section id="plug">
-        <DevPlug />
+        <DevPlug text=" Plug delivery into the experience you already built" />
       </section>
       <section id="dev-get-started">
         <DevGetStarted />

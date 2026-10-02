@@ -1,43 +1,34 @@
-import fleet1 from "../../../../assets/fleet-1.png";
-import fleet2 from "../../../../assets/fleet-2.png";
-import { MoveUpRight } from "lucide-react";
+import fleetHero from "../../../../assets/fleet-hero.png";
 import Button from "../../../components/common/Button";
-import { navigateToSection } from "../../../../router";
+import { fleetAppLink } from "../../../../utils";
 
 const FleetHero = () => {
-  const handleScroll = (id: string) => {
-    navigateToSection("/business/fleet", id);
-  };
   return (
-    <div className="px-4 md:px-12 lg:px-24 py-20 md:pb-24 md:pt-36 lg:pb-24 xl:py-[120px] bg-[#e6f4f9] gradientDiv">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col gap-4 items-center lg:items-start justify-center">
-          <p className="text-center md:text-left text-[30px] font-bold">
-            Put your entire fleet to work on VaMijo.
+    <div
+      className="bg-primary bg-cover bg-left md:bg-center flex items-center min-h-[360px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[560px]"
+      style={{ backgroundImage: `url(${fleetHero})` }}
+    >
+      <div className="max-w-6xl w-full mx-auto px-4 md:px-12 lg:px-24">
+        <div className="flex flex-col gap-4 max-w-md">
+          <p className="text-white text-[30px] lg:text-[44px]/12 font-bold leading-tight">
+            Know your fleet.
+            <br />
+            Run it better.
           </p>
-          <p className="text-center md:text-left text-[18px]">
-            Register your vehicles, delegate to fleet managers, and assign
-            drivers and vehicles to rides or time-based rentals — all from one
-            VaMijo Fleet account.
+          <p className="text-white/80 text-[16px] lg:text-[18px]">
+            Manage vehicles, drivers, trips, and daily operations from one
+            connected platform. Track your fleet in real time and keep every
+            ride and delivery moving.
           </p>
-
-          <div className="">
+          <div>
             <Button
-              text="Get started"
-              icon={<MoveUpRight size={16} />}
+              text="Explore fleet management"
+              bgColor="bg-primary-200"
               onClick={() => {
-                handleScroll("fleet-contact");
+                window.open(fleetAppLink, "_blank", "noopener,noreferrer");
               }}
             />
           </div>
-        </div>
-        <div className="hidden lg:block relative">
-          <img
-            src={fleet1}
-            alt=""
-            className="absolute -top-18 -right-10 z-10"
-          />
-          <img src={fleet2} alt="" className="absolute -top-5 left-0" />
         </div>
       </div>
     </div>

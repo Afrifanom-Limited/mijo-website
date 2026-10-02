@@ -1,50 +1,38 @@
-import vendor1 from "../../../../assets/vendor-1.png";
-import vendor2 from "../../../../assets/vendor-2.png";
-import vendor3 from "../../../../assets/vendor-3.png";
 import { MoveUpRight } from "lucide-react";
 import Button from "../../../components/common/Button";
 import { vendorAppLink } from "../../../../utils";
+import BusinessHeader from "../../../components/common/BusinessHeader";
+import heroImg from "../../../../assets/vendor-hero.png";
+import { navigateToSection } from "../../../../router";
 
 const VendorHero = () => {
   return (
     <div
-      className={`px-4 md:px-12 lg:px-24 py-20 md:pb-24 md:pt-36 lg:pb-12 xl:py-[120px] bg-[#e6f4f9] gradientDiv`}
+      className={`px-4 md:px-12 lg:px-24 py-20 md:pb-24 md:pt-36 lg:pb-12 xl:py-[120px] bg-[#e6f4f9] space-y-6`}
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col gap-4 items-center lg:items-start justify-center">
-          <p className="text-[30px] font-bold">
-            Manage deliveries without writing a line of code.
-          </p>
-          <p className="text-[18px]">
-            The VaMijo Vendor Portal gives your business a self-service way to
-            create, track, and confirm on-demand deliveries. No integration and
-            no developers required.
-          </p>
-
-          <div className="">
-            <Button
-              text="Get started"
-              icon={<MoveUpRight size={16} />}
-              onClick={() => {
-                window.open(vendorAppLink, "_blank", "noopener,noreferrer");
-              }}
-            />
-          </div>
-        </div>
-        <div className="hidden lg:block relative">
-          <img
-            src={vendor1}
-            alt=""
-            className="absolute bottom-5 -right-10 z-10 w-[70%]"
-          />
-          <img
-            src={vendor2}
-            alt=""
-            className="absolute bottom-12 -left-10 w-[50%]"
-          />
-          <img src={vendor3} alt="" className="" />
-        </div>
+      <BusinessHeader
+        title=" Every order. Every delivery, One place."
+        subtitle="Get your customers' orders from your business to their doorstep with fast, reliable delivery managed through one simple portal."
+      />
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <Button
+          text="Talk to Sales"
+          onClick={() => {
+            navigateToSection("/business/vendor", "vendor-sales");
+          }}
+          textColor="w-[260px] md:w-fit  flex justify-center text-white"
+        />
+        <Button
+          text="Log in to vendor portal"
+          icon={<MoveUpRight size={16} />}
+          onClick={() => {
+            window.open(vendorAppLink, "_blank", "noopener,noreferrer");
+          }}
+          bgColor="bg-secondary"
+          textColor="w-[260px] flex justify-center text-white"
+        />
       </div>
+      <img src={heroImg} className="mx-auto max-w-[80%] lg:max-w-[700px]" />
     </div>
   );
 };

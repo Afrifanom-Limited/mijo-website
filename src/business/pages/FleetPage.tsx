@@ -1,10 +1,11 @@
 import FleetHero from "./components/fleet/FleetHero";
-import FleetFeatures from "./components/fleet/FleetFeatures";
-import FleetSteps from "./components/fleet/FleetSteps";
-import FleetRental from "./components/fleet/FleetRental";
-import FleetGetStarted from "./components/fleet/FleetGetStarted";
+import FleetOverview from "./components/fleet/FleetOverview";
+import FleetGlance from "./components/fleet/FleetGlance";
+import FleetManagement from "./components/fleet/FleetManagement";
 import Faqs from "./components/Faqs";
+import CallToAction from "./components/landingPage/CallToAction";
 import FleetContact from "./components/fleet/FleetContact";
+import { navigateToSection } from "../../router";
 
 const FleetPage = () => {
   const faqs = [
@@ -39,20 +40,27 @@ const FleetPage = () => {
       <section id="fleet-hero">
         <FleetHero />
       </section>
-      <section id="fleet-features">
-        <FleetFeatures />
+      <section id="fleet-overview">
+        <FleetOverview />
       </section>
-      <section id="fleet-steps">
-        <FleetSteps />
+      <section id="fleet-glance">
+        <FleetGlance />
       </section>
-      <section id="fleet-rental">
-        <FleetRental />
-      </section>
-      <section id="fleet-get-started">
-        <FleetGetStarted />
+      <section id="fleet-management">
+        <FleetManagement />
       </section>
       <section id="fleet-faqs">
         <Faqs faqs={faqs} />
+      </section>
+      <section id="fleet-cta">
+        <CallToAction
+          title="Ready to take control of your fleet?"
+          subtitle="Bring your vehicles, drivers, and daily operations together with VaMijo Fleet Management."
+          buttonText="Contact Us"
+          onClick={() =>
+            navigateToSection("/business/fleet", "fleet-contact")
+          }
+        />
       </section>
       <section id="fleet-contact">
         <FleetContact />

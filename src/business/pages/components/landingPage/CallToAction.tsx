@@ -3,29 +3,25 @@ import ctaImageLeft from "../../../../assets/cta-lt.png";
 import ctaImageRight from "../../../../assets/cta-rt.png";
 import Button from "../../../components/common/Button";
 import { MoveRight } from "lucide-react";
-import { navigateToSection } from "../../../../router";
 
-const CallToAction = () => {
-  const handleScroll = (id: string) => {
-    navigateToSection("/business", id);
-  };
+const CallToAction = ({
+  title,
+  subtitle,
+  buttonText,
+  onClick,
+}: {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+  onClick: () => void;
+}) => {
   return (
     <ContentLayout>
       <div className="bg-[#016688] rounded-3xl max-w-[1312px] h-[360px] mx-auto text-white relative">
         <div className="space-y-4 h-full xl:w-[60%] flex flex-col mx-auto justify-center items-center p-6 lg:p-0">
-          <p className="text-2xl lg:text-4xl">Ready to Move Your Business? </p>
-          <p className="text-center">
-            Whether you need fleet management, delivery operations or seamless
-            API integration, <br />
-            VaMijo can help you build a better delivery experience.
-          </p>
-          <Button
-            text="Talk to us"
-            icon={<MoveRight />}
-            onClick={() => {
-              handleScroll("business-contact");
-            }}
-          />
+          <p className="text-2xl lg:text-4xl">{title}</p>
+          <p className="text-center">{subtitle}</p>
+          <Button text={buttonText} icon={<MoveRight />} onClick={onClick} />
         </div>
         <img
           src={ctaImageLeft}

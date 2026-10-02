@@ -4,7 +4,7 @@ import plug2 from "../../../../assets/plug-2.png";
 import plug3 from "../../../../assets/plug-3.png";
 import plug4 from "../../../../assets/plug-4.png";
 
-const DevPlug = () => {
+const DevPlug = ({ text }: { text: string }) => {
   const plugArray = [
     {
       title: "E-commerce",
@@ -29,9 +29,7 @@ const DevPlug = () => {
   ];
   return (
     <ContentLayout>
-      <p className="text-4xl text-center font-bold max-w-xl mx-auto">
-        Plug delivery into the experience you already built
-      </p>
+      <p className="text-4xl text-center font-bold max-w-xl mx-auto">{text}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 pt-12 lg:hidden gap-4">
         <div
           className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-48"
