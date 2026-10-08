@@ -5,9 +5,9 @@ import locate from "../../assets/locate.svg";
 import gh from "../../assets/gh.svg";
 import support from "../../assets/support.svg";
 import Reveal from "../../components/common/Reveal";
-// import Button from "../../components/common/Button";
-// import { MoveUpRight } from "lucide-react";
-// import { navigate } from "../../router";
+import Button from "../../components/common/Button";
+import { MoveUpRight } from "lucide-react";
+import { navigate } from "../../router";
 
 const BusinessCustomers = () => {
   const customers = [
@@ -51,13 +51,13 @@ const BusinessCustomers = () => {
           </Reveal>
         ))}
       </div>
-      {/* <div className="flex justify-center">
+      <div className="flex justify-center">
         <Button
           text="Get started with Vamijo Business"
           icon={<MoveUpRight />}
           onClick={() => navigate("/business")}
         />
-      </div> */}
+      </div>
     </div>
   );
 };

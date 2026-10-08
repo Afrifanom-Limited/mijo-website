@@ -19,7 +19,7 @@ const CallToAction = ({
     <ContentLayout>
       <div className="bg-[#016688] rounded-3xl max-w-[1312px] h-[360px] mx-auto text-white relative">
         <div className="space-y-4 h-full xl:w-[60%] flex flex-col mx-auto justify-center items-center p-6 lg:p-0">
-          <p className="text-2xl lg:text-4xl">{title}</p>
+          <p className="text-2xl text-center lg:text-4xl">{title}</p>
           <p className="text-center">{subtitle}</p>
           <Button text={buttonText} icon={<MoveRight />} onClick={onClick} />
         </div>

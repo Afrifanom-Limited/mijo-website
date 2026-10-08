@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Sparkle } from "lucide-react";
 import fleetManagement from "../../../../assets/fleet-management.png";
 import vehicleManagement from "../../../../assets/vehicle-management.png";
-import smartAssignments from "../../../../assets/smart-assignments.png";
+// import smartAssignments from "../../../../assets/smart-assignments.png";
 import ContentLayout from "../../../components/layout/ContentLayout";
 
 const points = [
@@ -21,14 +21,14 @@ const points = [
     subtitle: "Keep vehicle information, status, documentation, and history.",
     image: vehicleManagement,
   },
-  {
-    iconBg: "bg-[#e5f8ee]",
-    iconColor: "text-[#22c55e]",
-    title: "Smart Assignments",
-    subtitle:
-      "Match drivers and riders to vehicles and keep your operation organized as your fleet grows.",
-    image: smartAssignments,
-  },
+  // {
+  //   iconBg: "bg-[#e5f8ee]",
+  //   iconColor: "text-[#22c55e]",
+  //   title: "Smart Assignments",
+  //   subtitle:
+  //     "Match drivers and riders to vehicles and keep your operation organized as your fleet grows.",
+  //   image: smartAssignments,
+  // },
 ];
 
 const FleetManagement = () => {

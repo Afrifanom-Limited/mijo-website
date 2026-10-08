@@ -29,7 +29,7 @@ const slides: Slide[] = [
     image: heroImage,
     title: "Reliable rides, every time",
     subtitle:
-      "Connect with trusted drivers and get where you need to go, quickly and safely.",
+      "Connect with trusted riders and get your order where it needs to go, quickly and safely.",
   },
   {
     image: heroImage,

@@ -9,9 +9,11 @@ const DevGetStarted = () => {
     <ContentLayout>
       <div className="max-w-7xl mx-auto rounded-3xl bg-[#e6f4f9] h-[400px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-          <div className="flex flex-col lg:w-[80%] justify-center md:items-center p-6 lg:p-16 space-y-4">
-            <p className="font-bold text-4xl">Ready to start building</p>
-            <p className="md:text-center text-lg">
+          <div className="flex flex-col xl:w-[80%] justify-center items-center lg:items-start p-6 lg:p-16 space-y-4">
+            <p className="font-bold text-4xl text-center lg:text-left">
+              Ready to start building
+            </p>
+            <p className="text-center lg:text-left text-lg">
               Get your credentials, explore the API and start integrating VaMijo
               into your platform.
             </p>

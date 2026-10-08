@@ -10,7 +10,7 @@ const Faqs = ({ faqs, description }: { faqs: Faq[]; description?: string }) => {
     <ContentLayout>
       <div className="grid grid-cols-1 xl:grid-cols-5 gap-12 xl:gap-4">
         <div className="col-span-1 xl:col-span-2">
-          <p className="text-center lg:text-left text-[30px] lg:text-[48px] font-semibold">
+          <p className="text-center lg:text-left text-[30px] lg:text-[48px] font-bold">
             Frequently asked questions
           </p>
           <p className="">{description}</p>

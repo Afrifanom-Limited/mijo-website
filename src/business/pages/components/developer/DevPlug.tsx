@@ -32,7 +32,7 @@ const DevPlug = ({ text }: { text: string }) => {
       <p className="text-4xl text-center font-bold max-w-xl mx-auto">{text}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 pt-12 lg:hidden gap-4">
         <div
-          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-48"
+          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-56 sm:h-[300px]"
           style={{ backgroundImage: `url(${plugArray[0].image})` }}
         >
           <div className="absolute inset-0 bg-black/50 rounded-2xl" />
@@ -44,7 +44,7 @@ const DevPlug = ({ text }: { text: string }) => {
           />
         </div>
         <div
-          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-48"
+          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-56 sm:h-[300px]"
           style={{ backgroundImage: `url(${plugArray[1].image})` }}
         >
           <div className="absolute inset-0 bg-black/50 rounded-xl" />
@@ -56,7 +56,7 @@ const DevPlug = ({ text }: { text: string }) => {
           />
         </div>
         <div
-          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-48"
+          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-56 sm:h-[300px]"
           style={{ backgroundImage: `url(${plugArray[2].image})` }}
         >
           <div className="absolute inset-0 bg-black/50 rounded-xl" />
@@ -68,7 +68,7 @@ const DevPlug = ({ text }: { text: string }) => {
           />
         </div>
         <div
-          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-48"
+          className="relative flex items-center bg-cover bg-center bg-no-repeat p-6 rounded-xl h-56 sm:h-[300px]"
           style={{ backgroundImage: `url(${plugArray[3].image})` }}
         >
           <div className="absolute inset-0 bg-black/50 rounded-xl" />

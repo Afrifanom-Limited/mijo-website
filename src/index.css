@@ -83,3 +83,56 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* no bg gradient div */
+.gradientDiv2 {
+  position: relative;
+  overflow: hidden;
+  /* background: #cbeaf5; */
+  /* background: #e6f4f9; */
+  isolation: isolate;
+}
+
+.gradientDiv2::before,
+.gradientDiv2::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(110px);
+}
+
+.gradientDiv2::before {
+  width: 550px;
+  height: 550px;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    var(--color-primary) 0%,
+    var(--color-primary-200) 55%,
+    transparent 75%
+  );
+  opacity: 0.55;
+}
+
+.gradientDiv2::after {
+  width: 400px;
+  height: 700px;
+  top: 30%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    var(--color-secondary) 0%,
+    transparent 75%
+  );
+  opacity: 0.5;
+}
+
+.gradientDiv2 > * {
+  position: relative;
+  z-index: 1;
+}

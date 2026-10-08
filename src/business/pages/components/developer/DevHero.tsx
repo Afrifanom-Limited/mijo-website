@@ -6,7 +6,7 @@ import { developerAppLink } from "../../../../utils";
 const DevHero = () => {
   return (
     <div
-      className={`max-w-8xl mx-auto px-4 md:px-12 lg:px-24 py-28 md:pb-24  md:pt-36 lg:pb-8 xl:pt-[120px] xl:pb-20 bg-[#e6f4f9] gradientDiv`}
+      className={`max-w-8xl mx-auto px-4 md:px-12 lg:px-24 py-28 md:pb-24  md:pt-36 lg:pb-8 xl:pt-[120px] xl:pb-20 gradientDiv2 bg-primary/10 lg:bg-transparent`}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col gap-4 items-center lg:items-start justify-center">

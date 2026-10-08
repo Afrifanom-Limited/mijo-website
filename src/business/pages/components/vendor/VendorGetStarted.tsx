@@ -10,7 +10,9 @@ const VendorGetStarted = () => {
       <div className="max-w-7xl mx-auto rounded-3xl bg-[#e6f4f9] h-[400px]">
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
           <div className="flex flex-col lg:w-[80%] ml-auto lg:px-16 justify-center items-center md:items-start p-6  space-y-4">
-            <p className="font-bold text-4xl">Ready to start delivering?</p>
+            <p className="font-bold text-4xl">
+              Ready to simplify your deliveries?
+            </p>
             <p className="text-center md:text-left text-lg">
               Register your business, get approved, and start creating on-demand
               deliveries — no integration required.
