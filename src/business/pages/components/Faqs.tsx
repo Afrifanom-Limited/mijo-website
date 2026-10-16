@@ -8,14 +8,15 @@ interface Faq {
 const Faqs = ({ faqs, description }: { faqs: Faq[]; description?: string }) => {
   return (
     <ContentLayout>
-      <div className="grid grid-cols-1 xl:grid-cols-5 gap-12 xl:gap-4">
-        <div className="col-span-1 xl:col-span-2">
-          <p className="text-center lg:text-left text-[30px] lg:text-[48px] font-bold">
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-between max-w-7xl mx-auto">
+        <div className="flex-1">
+          <p className="text-center text-[30px] lg:text-[48px] font-bold">
             Frequently asked questions
           </p>
           <p className="">{description}</p>
         </div>
-        <div className="col-span-1 xl:col-span-3">
+
+        <div className="flex-1">
           <Accordion items={faqs} />
         </div>
       </div>

@@ -30,4 +30,4 @@ export const getAppStoreLink = (variant: "rider" | "driver" = "rider") => {
 
 export const developerAppLink = "https://developer.vamijogh.com/register";
 export const fleetAppLink = "https://fleetmanager.vamijogh.com/";
-export const vendorAppLink = "https://vendor.vamijogh.com/register";
+export const vendorAppLink = "https://vendor.vamijogh.com";

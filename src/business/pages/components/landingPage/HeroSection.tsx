@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import Reveal from "../../../components/common/Reveal";
 import Button from "../../../components/common/Button";
-import heroImage from "../../../../assets/hero.png";
+import fleetImage from "../../../../assets/hero1.png";
+import developerImage from "../../../../assets/hero2.png";
+import vendorImage from "../../../../assets/hero2.png";
 import vendorIcon from "../../../../assets/vendor-icon.png";
 import developerIcon from "../../../../assets/developer-icon.png";
 import fleetIcon from "../../../../assets/fleet-icon.png";
@@ -20,22 +22,22 @@ interface Control {
 
 const slides: Slide[] = [
   {
-    image: heroImage,
-    title: "Move your business forward",
+    image: fleetImage,
+    title: "Your Fleet. Your Business. Your Control.",
     subtitle:
-      "Power your deliveries with the vehicles, technology, and logistics infrastructure your business needs to grow.",
+      "Onboard vehicles, manage operations and track transactions in one place. VaMijo helps fleet owners and independent operators run a more organised, accountable transport business.",
   },
   {
-    image: heroImage,
-    title: "Reliable rides, every time",
+    image: developerImage,
+    title: "Bring VaMijo Delivery Into Your Platform.",
     subtitle:
-      "Connect with trusted riders and get your order where it needs to go, quickly and safely.",
+      "Connect your website, e-commerce platform or business application to VaMijo’s Vendor API to request deliveries, reduce manual work and give customers a smoother experience.",
   },
   {
-    image: heroImage,
-    title: "Deliveries made simple",
+    image: vendorImage,
+    title: "Deliver More. Manage Every Order in One Place",
     subtitle:
-      "From packages to groceries, VaMijo gets it there fast and affordably.",
+      "Your business deserves a delivery solution that works as hard as you do. With the VaMijo Vendor Portal, you can request deliveries, manage multiple orders at once and tap into VaMijo’s network of bikers through one convenient and secure platform.",
   },
 ];
 const controls: Control[] = [
@@ -88,10 +90,10 @@ const HeroSection = () => {
 
       <div className="relative w-full px-6 sm:px-12 md:px-20  max-w-6xl mx-auto">
         <Reveal direction="down" key={current}>
-          <h1 className="text-[30px] md:text-[60px] text-white font-bold leading-tight animate-fadeIn">
+          <h1 className="text-[25px] md:text-[50px] text-white font-bold leading-tight animate-fadeIn">
             {slides[current].title}
           </h1>
-          <p className="text-white text-[16px] md:text-[24px] pt-3.5 pb-2">
+          <p className="text-white text-[14px] md:text-[20px] pt-3.5 pb-2">
             {slides[current].subtitle}
           </p>
           <Button

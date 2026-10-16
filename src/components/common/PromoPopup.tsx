@@ -1,11 +1,24 @@
 import { useEffect, useState } from "react";
-import comingsoon from "../../assets/ghs15.png";
+import comingsoon from "../../assets/ghs15.jpeg";
+import { navigate } from "../../router";
 
 interface PromoPopupProps {
   onClose: () => void;
+  link?: string;
 }
 
-const PromoPopup = ({ onClose }: PromoPopupProps) => {
+const PromoPopup = ({ onClose, link }: PromoPopupProps) => {
+  const openLink = () => {
+    if (!link) return;
+    onClose();
+    // Internal paths use the in-app router; anything else opens in a new tab.
+    if (link.startsWith("/")) {
+      navigate(link);
+    } else {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
       <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
@@ -30,13 +43,38 @@ const PromoPopup = ({ onClose }: PromoPopupProps) => {
           </svg>
         </button>
 
-        <div className="flex items-center justify-center">
-          <img
-            src={comingsoon}
-            alt="VaMijo promo"
-            className="max-w-full h-auto object-contain"
-          />
-        </div>
+        {link ? (
+          <>
+            <button
+              onClick={openLink}
+              className="flex w-full items-center justify-center cursor-pointer"
+              aria-label="View promo details"
+            >
+              <img
+                src={comingsoon}
+                alt="VaMijo promo"
+                className="max-w-full h-auto object-contain"
+              />
+            </button>
+            {/* <div className="p-4">
+              <button
+                onClick={openLink}
+                className="w-full rounded-full bg-primary py-3 font-semibold text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg cursor-pointer"
+              >
+                View promo details
+              </button>
+            </div>
+               */}
+          </>
+        ) : (
+          <div className="flex items-center justify-center">
+            <img
+              src={comingsoon}
+              alt="VaMijo promo"
+              className="max-w-full h-auto object-contain"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -44,7 +82,7 @@ const PromoPopup = ({ onClose }: PromoPopupProps) => {
 
 const SESSION_KEY = "promo_popup_shown";
 
-const PromoPopupController = () => {
+const PromoPopupController = ({ link }: { link?: string }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -60,7 +98,7 @@ const PromoPopupController = () => {
   }, []);
 
   if (!visible) return null;
-  return <PromoPopup onClose={() => setVisible(false)} />;
+  return <PromoPopup onClose={() => setVisible(false)} link={link} />;
 };
 
 export default PromoPopupController;

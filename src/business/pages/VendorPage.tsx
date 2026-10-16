@@ -12,17 +12,39 @@ import { vendorAppLink } from "../../utils";
 const VendorPage = () => {
   const faqs = [
     {
-      title: "Do I need to receive orders through VaMijo?",
+      title: "What is the VaMijo Vendor Portal?",
       content:
-        "No. You can use VaMijo to deliver orders your customers place directly with your business.",
+        "The VaMijo Vendor Portal is a dedicated platform that allows businesses, e-commerce stores and online vendors to request and manage multiple deliveries using VaMijo’s delivery network. The portal also leverages on the digital addressing solution for accurate pickup and drop off.",
     },
-    // { title: "How do I request a rider?", content: "" },
     {
-      title: "How does billing work?",
+      title: "Who can use the Vendor Portal?",
       content:
-        "The Delivery API runs on a pay-as-you-go wallet, topped up from any telco. A small amount is deducted for each successfully completed delivery request, which covers the delivery itself plus the SMS confirmations sent along the way. Digital Address Verification is billed separately per lookup if you choose to use it. Every transaction is logged against its project, exportable as a report, and wallet funds can be spent on deliveries but not withdrawn.",
+        "The portal is designed for online vendors, e-commerce businesses, retailers, restaurants and other businesses that need reliable delivery services.",
     },
-    // { title: "", content: "" },
+    {
+      title: "Can I request multiple deliveries at once?",
+      content:
+        "Yes. The Vendor Portal allows you to submit multiple delivery requests in one go, making it easier to manage high order volumes and save time.",
+    },
+    {
+      title: "Do I need to have my own delivery riders?",
+      content:
+        "No. You can leverage VaMijo’s existing network of bikers to fulfil your delivery requests without having to build and manage your own delivery network.",
+    },
+    {
+      title: "Can I track and manage my delivery requests?",
+      content: "Yes, you can track all orders from pick up to drop off.",
+    },
+    {
+      title: "Is the Vendor Portal secure?",
+      content:
+        "VaMijo provides a secure and dedicated portal for business users, with Multi-factor authentication(MFA) allowing for one-time passcodes.",
+    },
+    {
+      title: "How do I get started?",
+      content:
+        "Register your business through the Vendor Portal. Once your account has been created and approved, where required, you can access the portal and begin making delivery requests.",
+    },
   ];
   return (
     <>

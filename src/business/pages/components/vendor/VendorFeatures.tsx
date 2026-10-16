@@ -29,7 +29,7 @@ const VendorFeatures = () => {
       <div className="mx-auto space-y-4">
         <div className="grid grig-cols-1 md:grid-cols-2 gap-6">
           <div className="lg:max-w-[75%]">
-            <p className="text-3xl lg:text-4xl text-center md:text-left">
+            <p className="text-3xl lg:text-3xl text-center md:text-left">
               <span className="font-bold">
                 Serve Your Customers. Deliver Every Order.{" "}
               </span>
@@ -39,7 +39,8 @@ const VendorFeatures = () => {
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <p className="text-center md:text-left">
               From order details to doorstep delivery, manage your customers'
-              deliveries and track every order with VaMijo's Vendor Portal.
+              deliveries and
+              <br /> track every order with VaMijo's Vendor Portal.
             </p>
             <div className="">
               <Button
