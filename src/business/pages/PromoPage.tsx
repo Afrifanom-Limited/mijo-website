@@ -7,8 +7,8 @@ import ContentLayout from "../components/layout/ContentLayout";
 import zones from "../../assets/zones.png";
 
 const rushPeriods = [
-  { label: "Morning", time: "6:00 AM – 10:00 AM" },
-  { label: "Evening", time: "4:00 PM – 8:00 PM" },
+  { label: "Morning", time: "5:00 AM – 10:00 AM" },
+  { label: "Evening", time: "3:00 PM – 7:00 PM" },
 ];
 
 const offPeakAreas = [
@@ -149,8 +149,11 @@ const PromoPage = () => {
 
             {/* Offer 2: 50% off outside rush hours */}
             <section className="relative px-6 pb-12 pt-10 md:px-14">
-              <OfferLabel number="02" title="Outside Rush Hours" />
+              <OfferLabel number="02" title="Vamijo off peak" />
               <div className="mt-6 text-center">
+                <p className="mb-2 inline-block -rotate-6 text-2xl font-black uppercase italic tracking-wide text-white md:text-3xl">
+                  up to
+                </p>
                 <p className="text-7xl font-black leading-none text-secondary drop-shadow-[0_4px_0_rgba(0,0,0,0.15)] md:text-9xl">
                   50% OFF
                 </p>
