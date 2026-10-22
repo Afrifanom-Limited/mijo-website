@@ -104,7 +104,10 @@ const PromoPage = () => {
             <TearLine />
 
             {/* Offer 1: Rush period */}
-            <section className="relative px-6 py-10 md:px-14">
+            <section
+              id="rush-period"
+              className="relative scroll-mt-24 px-6 py-10 md:px-14"
+            >
               <OfferLabel number="01" title="VaMijo Rush Period Promo" />
               <div className="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center">
                 <Starburst>
@@ -148,7 +151,10 @@ const PromoPage = () => {
             <TearLine />
 
             {/* Offer 2: 50% off outside rush hours */}
-            <section className="relative px-6 pb-12 pt-10 md:px-14">
+            <section
+              id="off-peak"
+              className="relative scroll-mt-24 px-6 pb-12 pt-10 md:px-14"
+            >
               <OfferLabel number="02" title="Vamijo off peak" />
               <div className="mt-6 text-center">
                 <p className="mb-2 inline-block -rotate-6 text-2xl font-black uppercase italic tracking-wide text-white md:text-3xl">
