@@ -196,13 +196,15 @@ const PromoPage = () => {
               <h2 className="mt-5 text-xl font-black uppercase text-primary md:text-2xl">
                 Download VaMijo, book your next ride, and enjoy the savings!
               </h2>
-              <div className="mt-6 flex justify-center gap-8">
+              <div className="mt-6 flex flex-col items-center md:flex-row justify-center gap-8">
                 <ActionButton
+                  textColor="w-fit"
                   image={appStore}
                   text="App Store"
                   link={AppStoreLinks.APPLE}
                 />
                 <ActionButton
+                  textColor="w-fit"
                   image={playStore}
                   text="Play store"
                   link={AppStoreLinks.GOOGLE}
