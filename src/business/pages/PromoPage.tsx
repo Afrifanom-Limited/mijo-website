@@ -7,8 +7,24 @@ import ContentLayout from "../components/layout/ContentLayout";
 import zones from "../../assets/zones.png";
 
 const rushPeriods = [
-  { label: "Morning", time: "5:00 AM – 10:00 AM" },
-  { label: "Evening", time: "3:00 PM – 7:00 PM" },
+  {
+    day: "Weekdays",
+    periods: [
+      { label: "Morning", time: "5:00 AM – 10:00 AM" },
+      { label: "Evening", time: "3:00 PM – 7:00 PM" },
+    ],
+  },
+  {
+    day: "Saturday",
+    periods: [
+      { label: "Morning", time: "6:00 AM – 10:00 AM" },
+      { label: "Evening", time: "4:00 PM – 8:00 PM" },
+    ],
+  },
+  {
+    day: "Sunday",
+    periods: [{ label: "Special Peak", time: "5:00 AM – 2:00 PM" }],
+  },
 ];
 
 const offPeakAreas = [
@@ -131,13 +147,24 @@ const PromoPage = () => {
                     Get where you need to be for less during peak hours. Rides
                     and deliveries within Greater Accra.
                   </p>
-                  <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
-                    {rushPeriods.map((period) => (
-                      <div key={period.label}>
-                        <p className="text-xs font-bold uppercase tracking-widest text-secondary">
-                          {period.label}
+                  <div className="mt-5 space-y-4">
+                    {rushPeriods.map((group) => (
+                      <div key={group.day}>
+                        <p className="text-sm font-black uppercase tracking-wide text-white">
+                          {group.day}
                         </p>
-                        <p className="text-xl font-extrabold">{period.time}</p>
+                        <div className="mt-1 flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
+                          {group.periods.map((period) => (
+                            <div key={period.label}>
+                              <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                                {period.label}
+                              </p>
+                              <p className="text-xl font-extrabold">
+                                {period.time}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>
