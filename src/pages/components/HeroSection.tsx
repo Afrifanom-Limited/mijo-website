@@ -1,7 +1,7 @@
 import Reveal from "../../components/common/Reveal";
 import handImage from "../../assets/hand.png";
 import Button from "../../components/common/Button";
-import { getAppStoreLink } from "../../utils";
+import { getAppStoreLink, scoutLink } from "../../utils";
 
 const openAppStore = (variant: "rider" | "driver") => {
   window.open(getAppStoreLink(variant), "_blank", "noopener,noreferrer");
@@ -55,6 +55,13 @@ const HeroSection = () => {
               text="Join as a Driver"
               bgColor="bg-secondary md:w-[200px]"
               onClick={() => openAppStore("driver")}
+            />
+            <Button
+              text="Join as a Scout"
+              bgColor="bg-[#14375f] md:w-[200px]"
+              onClick={() => {
+                window.open(scoutLink, "_blank", "noopener,noreferrer");
+              }}
             />
           </div>
         </Reveal>

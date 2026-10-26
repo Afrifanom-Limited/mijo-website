@@ -3,6 +3,7 @@ import Logo from "../common/Logo";
 import { Menu, X } from "lucide-react";
 import Button from "../common/Button";
 import { goToSection, navigate } from "../../router";
+import { scoutLink } from "../../utils";
 
 export default function Header({ topOffset = 0 }: { topOffset?: number }) {
   const [open, setOpen] = useState(false);
@@ -58,6 +59,14 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
                 className="cursor-pointer hover:text-primary"
               >
                 FAQs
+              </li>
+              <li
+                onClick={() => {
+                  window.open(scoutLink, "_blank", "noopener,noreferrer");
+                }}
+                className="cursor-pointer hover:text-primary"
+              >
+                VaMijo Scout
               </li>
             </ul>
           </nav>
@@ -118,6 +127,14 @@ export default function Header({ topOffset = 0 }: { topOffset?: number }) {
               className="cursor-pointer hover:text-dark"
             >
               FAQs
+            </li>
+            <li
+              onClick={() => {
+                window.open(scoutLink, "_blank", "noopener,noreferrer");
+              }}
+              className="cursor-pointer hover:text-dark"
+            >
+              VaMijo Scout
             </li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import Reveal from "../../../components/common/Reveal";
 import Button from "../../../components/common/Button";
 import fleetImage from "../../../../assets/hero1.png";
 import developerImage from "../../../../assets/hero2.png";
-import vendorImage from "../../../../assets/hero2.png";
+import vendorImage from "../../../../assets/hero3.png";
 import vendorIcon from "../../../../assets/vendor-icon.png";
 import developerIcon from "../../../../assets/developer-icon.png";
 import fleetIcon from "../../../../assets/fleet-icon.png";
