@@ -127,19 +127,19 @@ const PromoPage = () => {
               <OfferLabel number="01" title="VaMijo Rush Period Promo" />
               <div className="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center">
                 <Starburst>
-                  <p className="text-xs font-bold uppercase">Just</p>
+                  <p className="text-xs font-bold uppercase">Pay</p>
                   <p className="text-4xl font-black leading-none md:text-5xl">
-                    GHS 15
+                    50%
                   </p>
                   <p className="mt-1 text-[11px] font-bold uppercase leading-tight">
-                    on fares up
+                    on fares below
                     <br />
-                    to GHS 100*
+                    GHS 100*
                   </p>
                 </Starburst>
 
                 <div className="flex-1 text-center md:text-left">
-                  <DateTag dates="21st October – 1st November" />
+                  <DateTag dates="9th November – 14th November" />
                   <h2 className="mt-5 text-3xl font-black uppercase md:text-4xl">
                     Beat the rush for less!
                   </h2>
@@ -169,7 +169,8 @@ const PromoPage = () => {
                     ))}
                   </div>
                   <p className="mt-5 text-sm italic text-white/70">
-                    * For fares above GHS 100, simply pay the fare minus GHS 15.
+                    * Pay only half of your fare on rides below GHS 100 during
+                    the peak hours.
                   </p>
                 </div>
               </div>
@@ -194,7 +195,7 @@ const PromoPage = () => {
                   your rides outside the VaMijo Rush Periods
                 </p>
                 <div className="mt-4">
-                  <DateTag dates="21st October – 15th November" />
+                  <DateTag dates="9th November – 14th November" />
                 </div>
               </div>
 
