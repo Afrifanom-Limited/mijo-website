@@ -27,6 +27,13 @@ const rushPeriods = [
   },
 ];
 
+const rushTerms = [
+  "50% off all rides below GHS 100 taken within the peak periods.",
+  "For rides of GHS 100 and above, you pay the full fare.",
+  "Wait time and traffic charges are not discounted.",
+  "Limited to 2 discounted rides per rider per day.",
+];
+
 const offPeakAreas = [
   "Lapaz",
   "Kwashieman",
@@ -168,10 +175,16 @@ const PromoPage = () => {
                       </div>
                     ))}
                   </div>
-                  <p className="mt-5 text-sm italic text-white/70">
-                    * Pay only half of your fare on rides below GHS 100 during
-                    the peak hours.
-                  </p>
+                  <div className="mt-5 text-left text-sm text-white/70">
+                    <p className="font-bold uppercase tracking-widest text-white/80">
+                      * Terms &amp; conditions
+                    </p>
+                    <ul className="mt-2 list-disc space-y-1 pl-5">
+                      {rushTerms.map((term) => (
+                        <li key={term}>{term}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </section>
