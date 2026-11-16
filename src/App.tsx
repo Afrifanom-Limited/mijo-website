@@ -115,7 +115,7 @@ function App() {
       )} */}
       {/* <Header topOffset={showBanner ? 40 : 0} /> */}
       <Header topOffset={0} />
-      {/* <PromoPopupController link="/promos/vamijorush" /> */}
+      <PromoPopupController link="/promos/vamijorush" />
       <div
         // className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
         className="landing-tint transition-all duration-300"

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import comingsoon from "../../assets/ghs15.jpeg";
+import comingsoon from "../../assets/ghs15.png";
 import { navigate } from "../../router";
 
 interface PromoPopupProps {
