@@ -10,27 +10,26 @@ const rushPeriods = [
   {
     day: "Weekdays",
     periods: [
-      { label: "Morning", time: "5:00 AM – 10:00 AM" },
-      { label: "Evening", time: "3:00 PM – 7:00 PM" },
+      { label: "Morning", time: "7:00 AM – 9:00 AM" },
+      { label: "Evening", time: "4:00 PM – 6:00 PM" },
     ],
   },
   {
     day: "Saturday",
     periods: [
-      { label: "Morning", time: "6:00 AM – 10:00 AM" },
-      { label: "Evening", time: "4:00 PM – 8:00 PM" },
+      { label: "Morning", time: "8:00 AM – 10:00 AM" },
+      { label: "Evening", time: "4:00 PM – 6:00 PM" },
     ],
   },
   {
     day: "Sunday",
-    periods: [{ label: "Special Peak", time: "5:00 AM – 2:00 PM" }],
+    periods: [{ label: "Special Peak", time: "7:00 AM – 9:00 AM" }],
   },
 ];
 
 const rushTerms = [
-  "50% off all rides below GHS 100 taken within the peak periods.",
+  "GHC 15 off all rides with initial price below GHS 100 within the peak periods.",
   "For rides of GHS 100 and above, you pay the full fare.",
-  "Wait time and traffic charges are not discounted.",
   "Limited to 2 discounted rides per rider per day.",
 ];
 
@@ -134,9 +133,9 @@ const PromoPage = () => {
               <OfferLabel number="01" title="VaMijo Rush Period Promo" />
               <div className="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center">
                 <Starburst>
-                  <p className="text-xs font-bold uppercase">Pay</p>
+                  <p className="text-xs font-bold uppercase">Save</p>
                   <p className="text-4xl font-black leading-none md:text-5xl">
-                    50%
+                    GHC 15
                   </p>
                   <p className="mt-1 text-[11px] font-bold uppercase leading-tight">
                     on fares below
@@ -146,7 +145,7 @@ const PromoPage = () => {
                 </Starburst>
 
                 <div className="flex-1 text-center md:text-left">
-                  <DateTag dates="9th November – 14th November" />
+                  <DateTag dates="16th November – 22nd November" />
                   <h2 className="mt-5 text-3xl font-black uppercase md:text-4xl">
                     Beat the rush for less!
                   </h2>
@@ -208,7 +207,7 @@ const PromoPage = () => {
                   your rides outside the VaMijo Rush Periods
                 </p>
                 <div className="mt-4">
-                  <DateTag dates="9th November – 14th November" />
+                  <DateTag dates="9th November – 22nd November" />
                 </div>
               </div>
 
