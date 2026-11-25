@@ -5,7 +5,7 @@ import LandingPage from "./pages/LandingPage";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import ComingSoonBanner from "./pages/components/ComingSoonBanner";
-import PromoPopupController from "./components/common/PromoPopup";
+// import PromoPopupController from "./components/common/PromoPopup";
 import { useLocation, scrollToHashOnLoad } from "./router";
 import BusinessHeader from "./business/components/layout/Header";
 import BusinessFooter from "./business/components/layout/Footer";
@@ -13,13 +13,14 @@ import BusinessLandingPage from "./business/pages/BusinessLandingPage";
 import FleetPage from "./business/pages/FleetPage";
 import DeveloperPage from "./business/pages/DeveloperPage";
 import VendorPage from "./business/pages/VendorPage";
-import PromoPage from "./business/pages/PromoPage";
+
+// Retired promo URLs that should land on the home page instead.
+const expiredPaths = ["/promos/vamijorush"];
 
 const titles: Record<string, string> = {
   "/": "VaMijo - Ride, Deliver, Earn",
   "/terms": "Terms of Service | VaMijo",
   "/privacy": "Privacy Policy | VaMijo",
-  "/promos/vamijorush": "VaMijo Rush | VaMijo",
   "/business": "VaMijo Business",
   "/business/fleet": "VaMijo Fleet",
   "/business/developer": "VaMijo Developer Portal",
@@ -38,6 +39,13 @@ function App() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (expiredPaths.includes(pathname)) {
+      window.history.replaceState({}, "", "/");
+      window.dispatchEvent(new PopStateEvent("popstate"));
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (!scrollToHashOnLoad()) {
@@ -115,7 +123,7 @@ function App() {
       )} */}
       {/* <Header topOffset={showBanner ? 40 : 0} /> */}
       <Header topOffset={0} />
-      <PromoPopupController link="/promos/vamijorush" />
+      {/* <PromoPopupController link="/promos/vamijorush" /> */}
       <div
         // className={`transition-all duration-300 ${showBanner ? "pt-10" : ""}`}
         className="landing-tint transition-all duration-300"
@@ -125,8 +133,6 @@ function App() {
           <TermsOfService />
         ) : pathname === "/privacy" ? (
           <PrivacyPolicy />
-        ) : pathname === "/promos/vamijorush" ? (
-          <PromoPage />
         ) : (
           <LandingPage />
         )}
