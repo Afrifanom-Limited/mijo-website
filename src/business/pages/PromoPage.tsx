@@ -4,47 +4,36 @@ import ActionButton from "../../components/common/ActionButton";
 import Reveal from "../../components/common/Reveal";
 import { AppStoreLinks } from "../../utils";
 import ContentLayout from "../components/layout/ContentLayout";
-import zones from "../../assets/zones.png";
 
-const rushPeriods = [
+const bronyaSchedule = [
   {
-    day: "Weekdays",
-    periods: [
-      { label: "Morning", time: "7:00 AM – 9:00 AM" },
-      { label: "Evening", time: "4:00 PM – 6:00 PM" },
-    ],
+    day: "Monday – Friday",
+    morning: "6:00 AM – 8:30 AM",
+    evening: "3:30 PM – 7:00 PM",
   },
   {
     day: "Saturday",
-    periods: [
-      { label: "Morning", time: "8:00 AM – 10:00 AM" },
-      { label: "Evening", time: "4:00 PM – 6:00 PM" },
-    ],
+    morning: "7:00 AM – 9:00 AM",
+    evening: "4:00 PM – 6:30 PM",
   },
+  { day: "Sunday", morning: "6:30 AM – 10:00 AM", evening: null },
+];
+
+const hotZones = [
+  { zone: "Zone 1", areas: ["Adentan", "Oyarifa", "Ashiyie"] },
   {
-    day: "Sunday",
-    periods: [{ label: "Special Peak", time: "7:00 AM – 9:00 AM" }],
+    zone: "Zone 2",
+    areas: ["Old Barrier/Kokrobite Junction", "Weija", "Kasoa"],
   },
 ];
 
-const rushTerms = [
-  "GHC 15 off all rides with initial price below GHS 100 within the peak periods.",
-  "For rides of GHS 100 and above, you pay the full fare.",
-  "Limited to 2 discounted rides per rider per day.",
-];
-
-const offPeakAreas = [
-  "Lapaz",
-  "Kwashieman",
-  "Awoshie",
-  "Mallam",
-  "Dansoman",
-  "Laterbiokorshie",
-  "Mamprobi",
-  "Ministries",
-  "Ridge",
-  "Osu",
-  "Spintex",
+const campusZone = [
+  "University of Ghana",
+  "UPSA",
+  "Methodist University",
+  "Pentecost University",
+  "Ghana Communication Technology University",
+  "Accra Technical University",
 ];
 
 // Points for a 16-spike starburst in a 100x100 viewBox.
@@ -77,7 +66,7 @@ const TearLine = () => (
   </div>
 );
 
-const OfferLabel = ({ title }: { number: string; title: string }) => (
+const OfferLabel = ({ title }: { title: string }) => (
   <p className="text-sm font-bold uppercase tracking-[0.25em] text-white">
     {title}
   </p>
@@ -108,81 +97,75 @@ const PromoPage = () => {
             {/* Headline */}
             <header className="relative px-6 pb-10 pt-12 text-center md:px-14 md:pt-16">
               <span className="inline-block rotate-3 rounded-sm bg-white px-5 py-2 text-sm font-extrabold uppercase tracking-[0.2em] text-primary shadow-lg">
-                It's Customer Service Month
+                VaMijo Promotions
               </span>
               <h1 className="mt-8 text-4xl font-black uppercase leading-[1.05] md:text-6xl">
-                VaMijo has something{" "}
-                <span className="text-secondary">exciting</span> for you!
+                <span className="text-secondary">GHS 10 off</span> your rides,
+                morning, noon &amp; night!
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-white/85">
-                We're celebrating you with amazing deals to make your rides and
-                deliveries more affordable. Because at VaMijo,{" "}
+                Beat the rush, ride from our hot zones, or get home safely on
+                weekend nights.{" "}
                 <span className="font-bold text-white">
-                  you deserve more for choosing us!
+                  Three ways to save with VaMijo.
                 </span>
               </p>
             </header>
 
             <TearLine />
 
-            {/* Offer 1: Rush period */}
+            {/* Offer 1: Bronya */}
             <section
-              id="rush-period"
+              id="bronya"
               className="relative scroll-mt-24 px-6 py-10 md:px-14"
             >
-              <OfferLabel number="01" title="VaMijo Rush Period Promo" />
+              <OfferLabel title="VaMijo Bronya" />
               <div className="mt-6 flex flex-col items-center gap-8 md:flex-row md:items-center">
                 <Starburst>
                   <p className="text-xs font-bold uppercase">Save</p>
                   <p className="text-4xl font-black leading-none md:text-5xl">
-                    GHC 15
+                    GHS 10
                   </p>
                   <p className="mt-1 text-[11px] font-bold uppercase leading-tight">
-                    on fares below
+                    off eligible
                     <br />
-                    GHS 100*
+                    trips
                   </p>
                 </Starburst>
 
-                <div className="flex-1 text-center md:text-left">
-                  <DateTag dates="16th November – 22nd November" />
+                <div className="w-full flex-1 text-center md:text-left">
+                  <DateTag dates="Peak hours" />
                   <h2 className="mt-5 text-3xl font-black uppercase md:text-4xl">
                     Beat the rush for less!
                   </h2>
                   <p className="mt-2 text-white/85">
-                    Get where you need to be for less during peak hours. Rides
-                    and deliveries within Greater Accra.
+                    Enjoy GHS 10 off eligible trips during these peak periods:
                   </p>
-                  <div className="mt-5 space-y-4">
-                    {rushPeriods.map((group) => (
-                      <div key={group.day}>
-                        <p className="text-sm font-black uppercase tracking-wide text-white">
-                          {group.day}
+                  <div className="mt-5 divide-y divide-white/15 text-left">
+                    {bronyaSchedule.map((row) => (
+                      <div
+                        key={row.day}
+                        className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-3 sm:gap-4"
+                      >
+                        <p className="font-black uppercase tracking-wide">
+                          {row.day}
                         </p>
-                        <div className="mt-1 flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
-                          {group.periods.map((period) => (
-                            <div key={period.label}>
-                              <p className="text-xs font-bold uppercase tracking-widest text-secondary">
-                                {period.label}
-                              </p>
-                              <p className="text-xl font-extrabold">
-                                {period.time}
-                              </p>
-                            </div>
-                          ))}
+                        <div>
+                          <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                            Morning
+                          </p>
+                          <p className="font-extrabold">{row.morning}</p>
                         </div>
+                        {row.evening && (
+                          <div>
+                            <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                              Evening
+                            </p>
+                            <p className="font-extrabold">{row.evening}</p>
+                          </div>
+                        )}
                       </div>
                     ))}
-                  </div>
-                  <div className="mt-5 text-left text-sm text-white/70">
-                    <p className="font-bold uppercase tracking-widest text-white/80">
-                      * Terms &amp; conditions
-                    </p>
-                    <ul className="mt-2 list-disc space-y-1 pl-5">
-                      {rushTerms.map((term) => (
-                        <li key={term}>{term}</li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -190,54 +173,106 @@ const PromoPage = () => {
 
             <TearLine />
 
-            {/* Offer 2: 50% off outside rush hours */}
+            {/* Offer 2: Hot Zones */}
             <section
-              id="off-peak"
-              className="relative scroll-mt-24 px-6 pb-12 pt-10 md:px-14"
+              id="hot-zones"
+              className="relative scroll-mt-24 px-6 py-10 md:px-14"
             >
-              <OfferLabel number="02" title="Vamijo off peak" />
+              <OfferLabel title="VaMijo Hot Zones" />
               <div className="mt-6 text-center">
-                <p className="mb-2 inline-block -rotate-6 text-2xl font-black uppercase italic tracking-wide text-white md:text-3xl">
-                  up to
-                </p>
                 <p className="text-7xl font-black leading-none text-secondary drop-shadow-[0_4px_0_rgba(0,0,0,0.15)] md:text-9xl">
-                  50% OFF
+                  GHS 10 OFF
                 </p>
                 <p className="mt-3 text-xl font-extrabold uppercase md:text-2xl">
-                  your rides outside the VaMijo Rush Periods
+                  eligible trips within our hot zones
                 </p>
                 <div className="mt-4">
-                  <DateTag dates="9th November – 22nd November" />
+                  <DateTag dates="10:00 AM – 3:00 PM" />
                 </div>
               </div>
 
-              <p className="mt-8 text-center text-sm font-bold uppercase tracking-widest text-white/80">
-                In these selected areas
-              </p>
-              <img
-                src={zones}
-                alt="Map of promo areas across Accra"
-                className="mx-auto mt-4 w-full max-w-2xl rounded-2xl ring-1 ring-white/20"
-              />
-              <ul className="mt-6 flex flex-wrap justify-center gap-2">
-                {offPeakAreas.map((area) => (
-                  <li
-                    key={area}
-                    className="rounded-full border border-white/30 px-3 py-1 text-sm font-semibold"
+              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                {hotZones.map((item) => (
+                  <div
+                    key={item.zone}
+                    className="rounded-2xl border border-white/20 p-4"
                   >
-                    {area}
-                  </li>
+                    <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                      {item.zone}
+                    </p>
+                    <p className="mt-1 font-extrabold">
+                      {item.areas.join(" · ")}
+                    </p>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-white/20 p-4">
+                <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                  Campuses
+                </p>
+                <ul className="mt-2 grid gap-1 font-extrabold sm:grid-cols-2">
+                  {campusZone.map((campus) => (
+                    <li key={campus}>{campus}</li>
+                  ))}
+                </ul>
+              </div>
             </section>
 
-            {/* Thank you + download */}
+            <TearLine />
+
+            {/* Offer 3: Takes You Home */}
+            <section
+              id="takes-you-home"
+              className="relative scroll-mt-24 px-6 pb-12 pt-10 md:px-14"
+            >
+              <OfferLabel title="VaMijo Takes You Home" />
+              <div className="mt-6 flex flex-col items-center gap-8 md:flex-row-reverse md:items-center">
+                <Starburst>
+                  <p className="text-xs font-bold uppercase">Save</p>
+                  <p className="text-4xl font-black leading-none md:text-5xl">
+                    GHS 10
+                  </p>
+                  <p className="mt-1 text-[11px] font-bold uppercase leading-tight">
+                    on weekend
+                    <br />
+                    nights
+                  </p>
+                </Starburst>
+
+                <div className="flex-1 text-center md:text-left">
+                  <DateTag dates="Weekend night promo" />
+                  <h2 className="mt-5 text-3xl font-black uppercase md:text-4xl">
+                    Get home safely for less!
+                  </h2>
+                  <p className="mt-2 text-white/85">
+                    Helping you get home safely with GHS 10 off eligible trips.
+                  </p>
+                  <div className="mt-5 flex flex-wrap justify-center gap-x-8 gap-y-3 md:justify-start">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                        Days
+                      </p>
+                      <p className="text-xl font-extrabold">Friday – Sunday</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-secondary">
+                        Time
+                      </p>
+                      <p className="text-xl font-extrabold">
+                        9:00 PM – 12:00 AM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Download */}
             <footer className="relative bg-white px-6 py-10 text-center text-gray-900 md:px-14">
               <p className="mx-auto max-w-2xl text-gray-600">
-                This Customer Service Month, we're saying a{" "}
-                <span className="font-black text-secondary">BIG THANK YOU</span>{" "}
-                for choosing VaMijo. Your support keeps us moving, and we're
-                excited to keep serving you better.
+                Thank you for choosing VaMijo. Your support keeps us moving, and
+                we're excited to keep serving you better.
               </p>
               <h2 className="mt-5 text-xl font-black uppercase text-primary md:text-2xl">
                 Download VaMijo, book your next ride, and enjoy the savings!

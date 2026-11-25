@@ -13,14 +13,16 @@ import BusinessLandingPage from "./business/pages/BusinessLandingPage";
 import FleetPage from "./business/pages/FleetPage";
 import DeveloperPage from "./business/pages/DeveloperPage";
 import VendorPage from "./business/pages/VendorPage";
+import PromoPage from "./business/pages/PromoPage";
 
 // Retired promo URLs that should land on the home page instead.
-const expiredPaths = ["/promos/vamijorush"];
+const expiredPaths: string[] = [];
 
 const titles: Record<string, string> = {
   "/": "VaMijo - Ride, Deliver, Earn",
   "/terms": "Terms of Service | VaMijo",
   "/privacy": "Privacy Policy | VaMijo",
+  "/promos/vamijorush": "VaMijo Promotions | VaMijo",
   "/business": "VaMijo Business",
   "/business/fleet": "VaMijo Fleet",
   "/business/developer": "VaMijo Developer Portal",
@@ -133,6 +135,8 @@ function App() {
           <TermsOfService />
         ) : pathname === "/privacy" ? (
           <PrivacyPolicy />
+        ) : pathname === "/promos/vamijorush" ? (
+          <PromoPage />
         ) : (
           <LandingPage />
         )}
